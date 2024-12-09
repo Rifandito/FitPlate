@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etJenismedali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="jenis medali"
+        android:textSize="20sp"
+        android:inputType="textPersonName|textCapWords"/>
+
+    <EditText
+        android:id="@+id/etPoinBawaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="poin bawaan"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:maxLength="8">
+    </EditText>
+
+    <Button
+        android:id="@+id/bSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
