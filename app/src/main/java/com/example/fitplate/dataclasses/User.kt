@@ -2,9 +2,10 @@ package com.example.fitplate.dataclasses
 
 data class User(
     val idUser: String,
-    var username: String? = null,
-    var password: String? = null,
-    var namaLengkap: String? = null,
+    var username: String,
+    var password: String,
+    var namaLengkap: String,
+    var konsumsiAirUser: Double? = null,
     var beratBadan: Double? = null,
     var tinggiBadan: Double? = null,
     var usia: Int? = null,
@@ -13,5 +14,5 @@ data class User(
     var tujuanDiet: String? = null,
     var intensitasOlahraga: String? = null,
     var frekuensiMakan: Int? = null,
-    var kebutuhanMinimumKalori: Double? = null
+    var userBMI: Double? = null
 )

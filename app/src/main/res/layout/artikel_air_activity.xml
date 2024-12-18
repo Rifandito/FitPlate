@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section with Back Button -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back"
+                android:contentDescription="Back Button"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="8dp"
+                android:onClick="onBackPressed" />
+
+            <!-- Header Title -->
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Keseimbangan Cairan Tubuh"
+                android:textColor="@color/biru"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Body Diagram with Icons -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/air"
+                android:contentDescription="Body Diagram"
+                android:scaleType="fitCenter" />
+
+            <!-- Icons and Percentages -->
+
+            <!-- Add more icons or percentages here as needed -->
+        </RelativeLayout>
+
+        <!-- Description Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agar dapat memenuhi kebutuhan cairan tubuh dengan efektif selama puasa, disarankan untuk mengikuti pola minum 2-4-2. Ini artinya:"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sections -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 Gelas Air Putih saat Berbuka"
+            android:textSize="16sp"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minum air putih saat berbuka puasa merupakan langkah awal yang penting untuk mengganti cairan tubuh yang hilang selama berpuasa. Disarankan untuk memulai berbuka dengan dua gelas air putih sebelum melanjutkan dengan konsumsi makanan lainnya. Hal ini membantu memastikan tubuh mendapatkan cairan yang cukup setelah seharian beraktivitas."
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 Gelas Air Putih saat Makan Malam"
+            android:textSize="16sp"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selama malam hari, disarankan untuk terus mengonsumsi air putih secara berkala hingga menjelang tidur. Meminum empat gelas air putih pada malam hari dengan membaginya menjadi dua gelas saat makan malam dan dua gelas menjelang tidur dapat membantu proses pencernaan makanan."
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 Gelas Air Putih saat Sahur"
+            android:textSize="16sp"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sahur adalah waktu yang penting untuk memberi energi pada tubuh selama berpuasa. Oleh karena itu, disarankan untuk mengonsumsi setidaknya dua gelas air putih saat sahur. Minumlah satu gelas saat bangun tidur dan satu gelas setelah makan sahur untuk memastikan tubuh tetap terhidrasi sepanjang hari."
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</ScrollView>

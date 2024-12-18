@@ -6,7 +6,5 @@ data class TargetGiziHarian(
     var targetKalori: Double,
     var targetKarbohidrat: Double,
     var targetProtein: Double,
-    var targetLemak: Double,
-    var targetKonsumsiAir: Double
-
+    var targetLemak: Double
 )

@@ -78,7 +78,7 @@
             android:layout_height="60dp"
             android:background="@android:drawable/edit_text"
             android:hint="Usia"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:inputType="number" />
 
         <com.google.android.material.textfield.TextInputLayout

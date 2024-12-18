@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Fitplate"
 include(":app")
+include(":app")
  
