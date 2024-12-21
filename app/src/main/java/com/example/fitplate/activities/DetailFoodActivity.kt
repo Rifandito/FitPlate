@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitplate.AuthManager
-import com.example.fitplate.R
 import com.example.fitplate.RealtimeDatabase
 import com.example.fitplate.databinding.DetailFoodActivityBinding
 
@@ -26,7 +25,6 @@ class DetailFoodActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.detail_food_activity)
         // Inisialisasi binding
         binding = DetailFoodActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -85,24 +83,25 @@ class DetailFoodActivity : AppCompatActivity() {
     }
 
     private fun navigateToEditActivity() {
-//        val foodName = binding.tvFoodName.text.toString()
-//        val mealTime = binding.tvMealTime.text.toString()
-//        val calories = binding.tvCalories.text.removePrefix(": ").removeSuffix(" kkal").toDouble()
-//        val carbs = binding.tvCarbs.text.removePrefix(": ").removeSuffix(" g").toDouble()
-//        val protein = binding.tvProtein.text.removePrefix(": ").removeSuffix(" g").toDouble()
-//        val fat = binding.tvFat.text.removePrefix(": ").removeSuffix(" g").toDouble()
-//
-//        val intent = Intent(this, FoodEditActivity::class.java).apply {
-//            putExtra("food_id", foodId)
-//            putExtra("food_name", foodName)
-//            putExtra("meal_time", mealTime)
-//            putExtra("calories", calories)
-//            putExtra("carbs", carbs)
-//            putExtra("protein", protein)
-//            putExtra("fat", fat)
-//        }
-//        startActivity(intent)
+        val foodName = binding.tvFoodName.text.toString()
+        val mealTime = binding.tvMealTime.text.toString()
+        val calories = binding.tvCalories.text.removePrefix(": ").removeSuffix(" kkal").toString().toDouble()
+        val carbs = binding.tvCarbs.text.removePrefix(": ").removeSuffix(" g").toString().toDouble()
+        val protein = binding.tvProtein.text.removePrefix(": ").removeSuffix(" g").toString().toDouble()
+        val fat = binding.tvFat.text.removePrefix(": ").removeSuffix(" g").toString().toDouble()
+
+        val intent = Intent(this, FoodEditActivity::class.java).apply {
+            putExtra("food_id", foodId)
+            putExtra("food_name", foodName)
+            putExtra("meal_time", mealTime)
+            putExtra("calories", calories)
+            putExtra("carbs", carbs)
+            putExtra("protein", protein)
+            putExtra("fat", fat)
+        }
+        startActivity(intent)
     }
+
 
     private fun showDeleteConfirmationDialog() {
         AlertDialog.Builder(this)

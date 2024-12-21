@@ -17,7 +17,7 @@
 
         <!-- Back Button -->
         <ImageButton
-            android:id="@+id/FoodTrackToHome"
+            android:id="@+id/FoodEditToDetail"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
@@ -55,7 +55,7 @@
             android:layout_marginTop="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/foodNameInput"
+                android:id="@+id/foodNameEdit"
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/kaloriInput"
+                android:id="@+id/kaloriEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Kalori"
@@ -85,7 +85,7 @@
             android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/karbohidratInput"
+                android:id="@+id/karbohidratEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Karbohidrat"
@@ -99,7 +99,7 @@
             android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/proteinInput"
+                android:id="@+id/proteinEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Protein"
@@ -113,12 +113,26 @@
             android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/lemakInput"
+                android:id="@+id/lemakEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Lemak"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Waktu Makan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/dropdownWaktuMakanEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Add Food Button -->
         <Button
@@ -127,7 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:backgroundTint="#4B88A2"
-            android:text="Edit Data"
+            android:text="Tambah Makanan"
             android:textAllCaps="false"
             app:cornerRadius="8dp" />
 

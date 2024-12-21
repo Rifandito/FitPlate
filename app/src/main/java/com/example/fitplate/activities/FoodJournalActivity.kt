@@ -48,8 +48,6 @@ class FoodJournalActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.food_journal_activity)
-
         // Inisialisasi binding
         binding = FoodJournalActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
