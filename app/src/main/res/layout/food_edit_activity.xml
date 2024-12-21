@@ -17,7 +17,7 @@
 
         <!-- Back Button -->
         <ImageButton
-            android:id="@+id/FoodTrackToJournal"
+            android:id="@+id/FoodTrackToHome"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="310dp"
             android:layout_height="wrap_content"
-            android:text="Food Tracker"
+            android:text="Edit Data"
             android:textAlignment="center"
             android:textColor="@color/biru"
             android:textSize="20sp"
@@ -120,28 +120,14 @@
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="Waktu Makan"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/dropdownWaktuMakan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
         <!-- Add Food Button -->
         <Button
-            android:id="@+id/addFoodButton"
+            android:id="@+id/editFoodButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:backgroundTint="#4B88A2"
-            android:text="Tambah Makanan"
+            android:text="Edit Data"
             android:textAllCaps="false"
             app:cornerRadius="8dp" />
 

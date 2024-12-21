@@ -109,7 +109,7 @@ class InputUserActivity : AppCompatActivity() {
 
         // Validate required fields
         if (usia == null || tinggi == null || berat == null || target == null) {
-            Toast.makeText(this, "Please fill in all required fields!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "tolong isi semua kotak isian", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -130,10 +130,10 @@ class InputUserActivity : AppCompatActivity() {
         // Update Firebase database
         db.child("users").child(userId).updateChildren(updates)
             .addOnSuccessListener {
-                Toast.makeText(this, "Data successfully updated!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Data successfully updated!", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Failed to update data: ${it.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "gagal mengupdate data: ${it.message}", Toast.LENGTH_SHORT).show()
             }
     }
 

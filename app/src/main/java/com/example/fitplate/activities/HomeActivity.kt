@@ -95,7 +95,7 @@ class HomeActivity : AppCompatActivity() {
                 //Toast.makeText(this@HomeActivity, "user data fetched", Toast.LENGTH_SHORT).show()
             } else {
                 // Additional data does not exist, navigate to InputUserActivity
-                Toast.makeText(this@HomeActivity, "Your gizi target data is not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@HomeActivity, "Datamu tidak ketemu", Toast.LENGTH_SHORT).show()
             }
             isGiziTargetLoaded = true
             checkDataLoaded()
@@ -112,8 +112,7 @@ class HomeActivity : AppCompatActivity() {
                 progressLemak = snapshot.child("jumlahLemak").value?.toString()?.toDoubleOrNull()
                 //Toast.makeText(this@HomeActivity, "Gizi data fetched", Toast.LENGTH_SHORT).show()
             } else {
-                // Additional data does not exist, navigate to InputUserActivity
-                Toast.makeText(this@HomeActivity, "Your gizi progress data is not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@HomeActivity, "Wah kamu belum ada progres nih, ayo mulai!", Toast.LENGTH_SHORT).show()
             }
             isGiziProgressLoaded = true
             checkDataLoaded()
@@ -128,11 +127,7 @@ class HomeActivity : AppCompatActivity() {
                 Log.d("FirebaseDebug", "Target Air: $targetAir")
                 //Toast.makeText(this@HomeActivity, "Your ", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(
-                    this@HomeActivity,
-                    "Your water target data is not found",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@HomeActivity, "Datamu tidak ketemu", Toast.LENGTH_SHORT).show()
             }
             isAirTargetLoaded = true
             checkDataLoaded()
@@ -143,7 +138,7 @@ class HomeActivity : AppCompatActivity() {
             if (snapshot.exists()) {
                 progressAir = snapshot.child("jumlahAir").value?.toString()?.toDoubleOrNull()
             } else {
-                Toast.makeText(this@HomeActivity, "Your water progress data is not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@HomeActivity, "Jangan lupa minum air putih ya!", Toast.LENGTH_SHORT).show()
             }
             isAirProgressLoaded = true
             checkDataLoaded()
@@ -153,6 +148,8 @@ class HomeActivity : AppCompatActivity() {
     private fun checkDataLoaded() {
         if (isGiziTargetLoaded && isGiziProgressLoaded) {
             updateNutritionUI()
+        } else if (isAirTargetLoaded && isAirProgressLoaded) {
+            //updateAirUI()
         }
     }
 
@@ -194,7 +191,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.cardViewFoodTracker.setOnClickListener {
-            navigateToActivity(FoodTrackerActivity::class.java)
+            navigateToActivity(FoodJournalActivity::class.java)
         }
 
         binding.profileButton.setOnClickListener {

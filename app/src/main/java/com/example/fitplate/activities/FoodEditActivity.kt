@@ -3,21 +3,20 @@ package com.example.fitplate.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitplate.AuthManager
 import com.example.fitplate.R
 import com.example.fitplate.RealtimeDatabase
-import com.example.fitplate.databinding.FoodTrackerActivityBinding
+import com.example.fitplate.databinding.FoodEditActivityBinding
 import com.example.fitplate.dataclasses.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class FoodTrackerActivity : AppCompatActivity() {
+class FoodEditActivity : AppCompatActivity() {
 
     // inisialisasi view
-    private lateinit var binding: FoodTrackerActivityBinding
+    private lateinit var binding: FoodEditActivityBinding
 
     private val dbMakanan by lazy { RealtimeDatabase.instance().getReference("DataMakananUser") }
     private val dbProgresGizi by lazy { RealtimeDatabase.instance().getReference("ProgressGiziHarian") }
@@ -38,7 +37,7 @@ class FoodTrackerActivity : AppCompatActivity() {
         setContentView(R.layout.food_tracker_activity)
 
         // Inisialisasi binding
-        binding = FoodTrackerActivityBinding.inflate(layoutInflater)
+        binding = FoodEditActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Initialize AuthManager
@@ -53,7 +52,7 @@ class FoodTrackerActivity : AppCompatActivity() {
         }
 
         // Button to add food data
-        binding.addFoodButton.setOnClickListener {
+        binding.editFoodButton.setOnClickListener {
             val dataMakanan = getInputData(userId)
             if (validateInput(dataMakanan)) {
                 saveDataToDatabase(dataMakanan)
@@ -61,29 +60,19 @@ class FoodTrackerActivity : AppCompatActivity() {
                 // Open FoodJournalActivity
                 val intent = Intent(this, FoodJournalActivity::class.java)
                 startActivity(intent)
-                finish()
             }
         }
 
         // button back ke home
-        binding.FoodTrackToJournal.setOnClickListener {
+        binding.FoodTrackToHome.setOnClickListener {
             val intent = Intent(this, FoodJournalActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
-            finish() // Ensure FoodJournalActivity is removed from the back stack
         }
-    }
-
-    private fun createAdapter(data: List<String>): ArrayAdapter<String> {
-        return ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, data)
     }
 
     //fungsi untuk ngambil data dari input, kemudian dimasukkan ke objek
     private fun getInputData(userId: String): Makanan {
         currentDate = getCurrentDate() // Get the current date and time
-
-        val waktuMakanList = listOf("Sarapan", "Makan Siang", "Makan Sore", "Makan Malam")
-        binding.dropdownWaktuMakan.setAdapter(createAdapter(waktuMakanList))
 
         // ambil data dari input
         val foodName = binding.foodNameInput.text.toString().trim()
@@ -91,14 +80,13 @@ class FoodTrackerActivity : AppCompatActivity() {
         val protein = binding.proteinInput.text.toString().toDoubleOrNull()
         val karbo = binding.karbohidratInput.text.toString().toDoubleOrNull()
         val lemak = binding.lemakInput.text.toString().toDoubleOrNull()
-        val waktuMakan = binding.dropdownWaktuMakan.text.toString()
 
         // masukkan ke objek
         return Makanan(
             idMakanan = UUID.randomUUID().toString(),
             idUser = userId,
             tanggal = currentDate,
-            waktuMakan = waktuMakan,
+            waktuMakan = "",
             namaMakanan = foodName,
             kalori = kalori,
             protein = protein,
@@ -128,10 +116,6 @@ class FoodTrackerActivity : AppCompatActivity() {
             }
             makanan.lemak == null -> {
                 Toast.makeText(this, "Lemak tidak boleh kosong", Toast.LENGTH_SHORT).show()
-                return false
-            }
-            makanan.waktuMakan.isEmpty() -> {
-                Toast.makeText(this, "Waktu makan tidak boleh kosong", Toast.LENGTH_SHORT).show()
                 return false
             }
         }
@@ -199,7 +183,7 @@ class FoodTrackerActivity : AppCompatActivity() {
                 // Update atau buat data progress harian
                 dbProgresGizi.child(userId).child(dateKey).updateChildren(progressGiziHarianMap)
                     .addOnSuccessListener {
-                        //Toast.makeText(this, "Progress gizi berhasil diperbarui", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Progress gizi berhasil diperbarui", Toast.LENGTH_SHORT).show()
                     }
                     .addOnFailureListener { exception ->
                         Toast.makeText(this, "Gagal memperbarui progress gizi: ${exception.message}", Toast.LENGTH_SHORT).show()
