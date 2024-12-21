@@ -4,7 +4,7 @@ import java.util.*
 data class ProgressKonsumsiAir(
     val idProgressKonsumsiAir: String,
     val idUser: String,
-    var tanggal: Date,
+    var tanggal: String,
     var jumlahAir: Double,
     var status: String? = null
 )

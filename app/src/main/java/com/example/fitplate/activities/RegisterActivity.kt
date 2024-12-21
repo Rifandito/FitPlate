@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitplate.dataclasses.*
 import java.util.*
+import java.text.SimpleDateFormat
 
 import android.widget.Button
 import android.widget.EditText
@@ -18,9 +19,6 @@ import com.example.fitplate.RealtimeDatabase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
-
-import java.util.UUID
-
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -124,66 +122,76 @@ class RegisterActivity : AppCompatActivity() {
             }
     }
 
+    private fun getCurrentDate(): String {
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        sdf.timeZone = TimeZone.getTimeZone("UTC")
+        return sdf.format(Date())
+    }
+
     // fungsi untuk membuat root setiap data class
     // yang berhubungan dengan user
     private fun createAssociatedData(userId: String) {
-        val currentDate = Date() // Get the current date and time
-        val associatedData = mapOf(
-            "ProgressGiziHarian" to ProgressGiziHarian(
-                idProgressGiziHarian = UUID.randomUUID().toString(),
-                idUser = userId,
-                tanggal = currentDate,
-                jumlahKalori = 0.0,
-                jumlahKarbohidrat = 0.0,
-                jumlahProtein = 0.0,
-                jumlahLemak = 0.0,
-                status = null
-            ),
-            "ProgressKonsumsiAir" to ProgressKonsumsiAir(
-                idProgressKonsumsiAir = UUID.randomUUID().toString(),
-                idUser = userId,
-                tanggal = currentDate,
-                jumlahAir = 0.0,
-                status = null
-            ),
-            "targetGiziHarian" to TargetGiziHarian(
-                idTargetGiziHarian = UUID.randomUUID().toString(),
-                idUser = userId,
-                targetKalori = 2000.0,
-                targetKarbohidrat = 300.0,
-                targetProtein = 50.0,
-                targetLemak = 70.0
-            ),
-            "targetAirHarian" to TargetKonsumsiAir(
-                idTargetKonsumsiAir = UUID.randomUUID().toString(),
-                idUser = userId,
-                targetKonsumsiAir = 2000.0
-            ),
-            "skor" to Skor(
-                idLevel = UUID.randomUUID().toString(),
-                idUser = userId,
-                totalPoints = 0
-            ),
-            "medalSums" to UserMedalSum(
-                idMedalSum = UUID.randomUUID().toString(),
-                idUser = userId,
-                bronzeCount = 0,
-                silverCount = 0,
-                goldCount = 0
-            )
+        val currentDate = getCurrentDate()
+        val dateKey = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date()) // Generate date key
+
+        // Initialize continuous data
+        val progressGiziHarian = ProgressGiziHarian(
+            idProgressGiziHarian = "$userId-$dateKey",
+            idUser = userId,
+            tanggal = currentDate,
+            jumlahKalori = 0.0,
+            jumlahKarbohidrat = 0.0,
+            jumlahProtein = 0.0,
+            jumlahLemak = 0.0,
+            status = null
+        )
+        val progressKonsumsiAir = ProgressKonsumsiAir(
+            idProgressKonsumsiAir = "$userId-$dateKey",
+            idUser = userId,
+            tanggal = currentDate,
+            jumlahAir = 0.0,
+            status = null
         )
 
+        // Initialize discrete data
+        val targetGiziHarian = TargetGiziHarian(
+            idTargetGiziHarian = UUID.randomUUID().toString(),
+            idUser = userId,
+            targetKalori = 2000.0,
+            targetKarbohidrat = 300.0,
+            targetProtein = 50.0,
+            targetLemak = 70.0
+        )
+        val targetAirHarian = TargetKonsumsiAir(
+            idTargetKonsumsiAir = UUID.randomUUID().toString(),
+            idUser = userId,
+            targetKonsumsiAir = 2.0
+        )
+        val skor = Skor(
+            idLevel = UUID.randomUUID().toString(),
+            idUser = userId,
+            totalPoints = 0
+        )
+        val userMedalSum = UserMedalSum(
+            idMedalSum = UUID.randomUUID().toString(),
+            idUser = userId,
+            bronzeCount = 0,
+            silverCount = 0,
+            goldCount = 0
+        )
+
+        // Save data to database
         val dbRef = db.getReference()
 
-        associatedData.forEach { (path, data) ->
-            dbRef.child(path).child(UUID.randomUUID().toString()).setValue(data)
-                .addOnSuccessListener {
-                    // Log or handle success if needed
-                }
-                .addOnFailureListener { e ->
-                    Toast.makeText(this, "Failed to save data to $path: ${e.message}", Toast.LENGTH_SHORT).show()
-                }
-        }
+        // Continuous data saved under userId/dateKey
+        dbRef.child("ProgressGiziHarian").child(userId).child(dateKey).setValue(progressGiziHarian)
+        dbRef.child("ProgressKonsumsiAir").child(userId).child(dateKey).setValue(progressKonsumsiAir)
+
+        // Discrete data saved under userId
+        dbRef.child("TargetGiziHarian").child(userId).setValue(targetGiziHarian)
+        dbRef.child("TargetKonsumsiAir").child(userId).setValue(targetAirHarian)
+        dbRef.child("Skor").child(userId).setValue(skor)
+        dbRef.child("UserMedalSum").child(userId).setValue(userMedalSum)
     }
 
     // save user id dalam sharedpreference

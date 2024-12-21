@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Fitplate</string>
     <string name="back_button">Back Button</string>
+    <string name="konsumsi1">Back Button</string>
     <string name="deskripsi">akan membantu untuk mencapai pola makan sehat melalui fitur personalisasi kalori, resep rendah kalori, pemantauan nutrisi, dan tantangan interaktif. Dilengkapi gamifikasi, FitPlate menjadikan diet lebih mudah dan menyenangkan.</string>
 </resources>

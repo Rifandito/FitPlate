@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     // User does not exist in the database, clear SharedPreferences and navigate to login
                     authManager.logout()
-                    Toast.makeText(this@MainActivity, "Session expired. Please log in again.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Session expired. Please log in again or create new account", Toast.LENGTH_SHORT).show()
                     navigateToLogin()
                 }
             }

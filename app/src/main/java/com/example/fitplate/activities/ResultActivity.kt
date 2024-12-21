@@ -135,9 +135,8 @@ class ResultActivity : AppCompatActivity() {
                     // Step 5, Fetch and display saved BMI
                     showUserBMI()
 
-                    Toast.makeText(this@ResultActivity, "user data fetched", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@ResultActivity, "user data fetched", Toast.LENGTH_SHORT).show()
                 } else {
-                    // Additional data does not exist, navigate to InputUserActivity
                     Toast.makeText(this@ResultActivity, "user data is not found", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -182,7 +181,7 @@ class ResultActivity : AppCompatActivity() {
         tdeeResult = bmrResult?.let { bmr ->
             activityLevel.let { aktivitas ->
                 Calculators.calculateTDEE(bmr, aktivitas)
-            } //?: Calculators.calculateTDEE(bmr, "tidak pernah") // Default value
+            }
         }
 
         // Bagian kalkulator Adjusted TDEE
@@ -212,7 +211,7 @@ class ResultActivity : AppCompatActivity() {
         macronutrientsResult = adjustedTdeeResult?.let { adjustedTdee ->
             dietGoal.let { goal ->
                 Calculators.calculateMacronutrients(adjustedTdee, goal)
-            } //?: Calculators.calculateMacronutrients(adjustedTdee, "jaga berat badan") // Default goal
+            }
         }
     }
 
@@ -221,7 +220,7 @@ class ResultActivity : AppCompatActivity() {
         bmiResult?.let { bmi ->
             dbUser.child(iDuser).child("userBMI").setValue(bmi)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "BMI berhasil disimpan!", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "BMI berhasil disimpan!", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Gagal menyimpan BMI: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -241,7 +240,7 @@ class ResultActivity : AppCompatActivity() {
 
             dbTargetGiziHarian.child(iDuser).updateChildren(updates)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "Target gizi harian berhasil diperbarui!", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Target gizi harian berhasil diperbarui!", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Gagal memperbarui target gizi harian: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -259,7 +258,7 @@ class ResultActivity : AppCompatActivity() {
 
             dbTargetKonsumsiAir.child(iDuser).updateChildren(updates)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "Target konsumsi air berhasil diperbarui!", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Target konsumsi air berhasil diperbarui!", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Gagal memperbarui target konsumsi air: ${e.message}", Toast.LENGTH_SHORT).show()

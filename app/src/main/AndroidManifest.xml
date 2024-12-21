@@ -47,7 +47,52 @@
 
         </activity>
         <activity
-            android:name=".activities.ProfileActivity"
+            android:name=".activities.ProfilActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.FoodTrackerActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.FoodJournalActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.DetailFoodActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.KonsumsiAirActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.ArtikelAirActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.ArtikelKonsumsiActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.GuideActivity"
+            android:exported="true">
+
+        </activity>
+<!--        <activity-->
+<!--            android:name=".activities.LeaderboardActivity"-->
+<!--            android:exported="true">-->
+
+<!--        </activity>-->
+        <activity
+            android:name=".activities.MengukurTubuhActivity"
             android:exported="true">
 
         </activity>

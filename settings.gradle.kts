@@ -16,10 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven( "https://jitpack.io" )
     }
 }
 
 rootProject.name = "Fitplate"
-include(":app")
 include(":app")
  
