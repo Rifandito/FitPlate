@@ -147,17 +147,18 @@ class ResultActivity : AppCompatActivity() {
         })
     }
 
+
     private fun displayUserData() {
-        tujuanDiet.text = dietGoal ?: "N/A"
-        intensitasOlahraga.text = activityLevel ?: "N/A"
-        jeniskelamin.text = gender ?: "N/A"
-        tingkatanProgram.text = tingkatan
-        usia.text = (age ?: "N/A").toString()
-        konsumsiAir.text = (konsumsiAIR ?: "N/A").toString()
-        jumlahMakan.text = (brpKaliMakan ?: "N/A").toString()
-        tinggiBadan.text = (height ?: "N/A").toString()
-        beratBadan.text = (weight ?: "N/A").toString()
-        targetBb.text = (targetBeratBadan ?: "N/A").toString()
+        tujuanDiet.text = "Tujuan diet: $dietGoal"
+        intensitasOlahraga.text = "Intensitas olahraga: $activityLevel"
+        jeniskelamin.text = "Jenis kelamin: $gender"
+        tingkatanProgram.text = "Tingkatan program: $tingkatan"
+        usia.text = "Usia: $age"
+        konsumsiAir.text = "Konsumsi air harian: $konsumsiAIR Liter"
+        jumlahMakan.text = "Jumlah makan dalam sehari: ${brpKaliMakan}x "
+        tinggiBadan.text = "Tinggi badan: $height"
+        beratBadan.text = "Berat badan: $weight"
+        targetBb.text = "Target berat badan: $targetBeratBadan"
     }
 
     // fungsi untuk menghitung BMI, BMR, dll menggunakan calculator class
@@ -278,7 +279,7 @@ class ResultActivity : AppCompatActivity() {
                     if (savedBMI != null) {
                         hasilBMI.text = String.format("BMI Anda: %.1f", savedBMI) // Display with 1 decimal
                     } else {
-                        hasilBMI.text = "BMI belum tersedia" // Display fallback message
+                        hasilBMI.text = "BMI belum tersedia"
                     }
                 } else {
                     Toast.makeText(this@ResultActivity, "BMI belum ditemukan di database.", Toast.LENGTH_SHORT).show()

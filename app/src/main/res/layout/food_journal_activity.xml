@@ -13,25 +13,26 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="75dp">
 
         <ImageButton
             android:id="@+id/foodJournalToHome"
-            android:paddingLeft="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/back"
-            android:contentDescription="Back Button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
             android:background="@android:color/transparent"
-            android:layout_marginEnd="8dp"/>
+            android:contentDescription="Back Button"
+            android:onClick="onBackPressed"
+            android:src="@drawable/back" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="5dp"
             android:text="Food Journal"
             android:textAlignment="center"
             android:textColor="@color/biru"
@@ -57,7 +58,7 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
-                android:progress="62"
+                android:progress="0"
                 app:indicatorColor="@color/biru"
                 app:trackColor="@color/grey_light" />
 
@@ -74,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="300 dari 800 kkal"
+                android:text="secara keseluruhan 0%"
                 android:textColor="@color/grey" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -115,7 +116,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:progress="62"
+                    android:progress="0"
                     android:progressTint="@color/biru" />
 
                 <TextView
@@ -123,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="500/800 kkal" />
+                    android:text="0/0 Kkal" />
             </LinearLayout>
 
             <!-- Protein -->
@@ -144,7 +145,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:progress="75"
+                    android:progress="0"
                     android:progressTint="@color/biru" />
 
                 <TextView
@@ -152,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="60/80 g" />
+                    android:text="0/0 g" />
             </LinearLayout>
 
             <!-- Karbohidrat -->
@@ -173,7 +174,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:progress="45"
+                    android:progress="0"
                     android:progressTint="@color/biru" />
 
                 <TextView
@@ -181,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="130/300 g" />
+                    android:text="0/0 g" />
             </LinearLayout>
 
             <!-- Lemak -->
@@ -202,7 +203,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:progress="57"
+                    android:progress="0"
                     android:progressTint="@color/biru" />
 
                 <TextView
@@ -210,7 +211,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="40/70 g" />
+                    android:text="0/0 g" />
             </LinearLayout>
 
         </LinearLayout>

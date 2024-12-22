@@ -1,540 +1,543 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
 
-    <!-- Header -->
     <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <!-- Medal Guide Button -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewMedalGuide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#F0F0F0">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/fiala"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Medal Guide"
-                    android:textColor="@color/biru"
-                    android:textStyle="bold"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=">"
-                    android:textColor="@color/biru"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <ImageButton
-            android:id="@+id/leaderboardButton"
-            android:layout_width="48dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/leaderboard"
-            android:scaleType="centerInside"
-            android:background="@android:color/transparent" /> <!-- No background color -->
-
-        <ImageButton
-            android:id="@+id/profileButton"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="2dp"
-            android:src="@drawable/profil"
-            android:scaleType="centerCrop"
-            android:background="@android:color/transparent" /> <!-- No background color -->
-
-
-    </LinearLayout>
-
-    <!-- Diet Target Card -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="2dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Title -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Target Diet Harian Anda"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#2196F3"
-                android:background="#E3F2FD"
-                android:padding="12dp"
-                android:gravity="center"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- Kalori Progress -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Kalori"
-                        android:textStyle="bold"
-                        android:textColor="#006064"/>
-
-                    <TextView
-                        android:id="@+id/textViewKaloriTarget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10/111Kkal"
-                        android:textColor="#757575"/>
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressBarKalori"
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp"
-                    android:progress="75"
-                    android:progressTint="#006064"
-                    android:progressBackgroundTint="#E0E0E0"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_marginTop="4dp"/>
-            </LinearLayout>
-
-            <!-- Protein Progress -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Protein"
-                        android:textStyle="bold"
-                        android:textColor="#006064"/>
-
-                    <TextView
-                        android:id="@+id/textViewProteinTarget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10/111Kkal"
-                        android:textColor="#757575"/>
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressBarProtein"
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp"
-                    android:progress="85"
-                    android:progressTint="#006064"
-                    android:progressBackgroundTint="#E0E0E0"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_marginTop="4dp"/>
-            </LinearLayout>
-
-            <!-- Repeat similar blocks for karbohidrat, Lemak, and Asupan Air -->
-            <!-- Karbohidrat Progress -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="karbohidrat"
-                        android:textStyle="bold"
-                        android:textColor="#006064"/>
-
-                    <TextView
-                        android:id="@+id/textViewKarboTarget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10/111Kkal"
-                        android:textColor="#757575"/>
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressBarKarbo"
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp"
-                    android:progress="60"
-                    android:progressTint="#006064"
-                    android:progressBackgroundTint="#E0E0E0"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_marginTop="4dp"/>
-            </LinearLayout>
-
-            <!-- Lemak Progress -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Lemak"
-                        android:textStyle="bold"
-                        android:textColor="#006064"/>
-
-                    <TextView
-                        android:id="@+id/textViewLemakTarget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="#757575"/>
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressBarLemak"
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp"
-                    android:progressTint="#006064"
-                    android:progressBackgroundTint="#E0E0E0"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_marginTop="4dp"/>
-            </LinearLayout>
-
-            <!-- Asupan Air Progress -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Asupan Air"
-                        android:textStyle="bold"
-                        android:textColor="#006064"/>
-
-                    <TextView
-                        android:id="@+id/textViewAirTarget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10/111Kkal"
-                        android:textColor="#757575"/>
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressBarAir"
-                    android:layout_width="match_parent"
-                    android:layout_height="12dp"
-                    android:progress="90"
-                    android:progressTint="#006064"
-                    android:progressBackgroundTint="#E0E0E0"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_marginTop="4dp"/>
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-<!--    button -->
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#FFFFFF">
+        android:padding="16dp">
 
-        <!-- Diet Recipe Guide Button -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:onClick="onDietRecipeGuideClicked"> <!-- Define this method in your activity/fragment -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:background="#FFE4B5">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/ic_resep"
-                    android:contentDescription="Diet Recipe Icon"
-                    android:layout_gravity="center_vertical" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Diet Recipe Guide"
-                    android:textColor="#FF8C00"
-                    android:textSize="18sp"
-                    android:gravity="center_vertical"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:paddingStart="16dp" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/detail"
-                    android:contentDescription="Arrow"
-                    android:layout_gravity="center_vertical" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Food Tracker Button -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewFoodTracker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:onClick="openFoodTrackerActivity"> <!-- Define this method in your activity/fragment -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:background="#ADD8E6"
-                >
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/tracker"
-                    android:contentDescription="Food Tracker Icon"
-                    android:layout_gravity="center_vertical" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Food Tracker"
-                    android:textColor="@color/biru"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:textSize="18sp"
-                    android:gravity="center_vertical"
-                    android:paddingStart="16dp" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/detail"
-                    android:contentDescription="Arrow"
-                    android:layout_gravity="center_vertical" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:cardCornerRadius="16dp"
-        android:background="#FFFFFF">
-
+        <!-- Header -->
         <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Medal Guide Button -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewMedalGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#F0F0F0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/fiala"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medal Guide"
+                        android:textColor="@color/biru"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textColor="@color/biru"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageButton
+                android:id="@+id/leaderboardButton"
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/leaderboard"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent" /> <!-- No background color -->
+
+            <ImageButton
+                android:id="@+id/profileButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/profil"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent" /> <!-- No background color -->
+        </LinearLayout>
+
+        <!-- Diet Target Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Target Diet Harian Anda"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3"
+                    android:background="#E3F2FD"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Kalori Progress -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Kalori"
+                            android:textStyle="bold"
+                            android:textColor="#006064"/>
+
+                        <TextView
+                            android:id="@+id/textViewKaloriTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10/111Kkal"
+                            android:textColor="#757575"/>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarKalori"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:progress="75"
+                        android:progressTint="#006064"
+                        android:progressBackgroundTint="#E0E0E0"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Protein Progress -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Protein"
+                            android:textStyle="bold"
+                            android:textColor="#006064"/>
+
+                        <TextView
+                            android:id="@+id/textViewProteinTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10/111Kkal"
+                            android:textColor="#757575"/>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarProtein"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:progress="85"
+                        android:progressTint="#006064"
+                        android:progressBackgroundTint="#E0E0E0"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Repeat similar blocks for karbohidrat, Lemak, and Asupan Air -->
+                <!-- Karbohidrat Progress -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="karbohidrat"
+                            android:textStyle="bold"
+                            android:textColor="#006064"/>
+
+                        <TextView
+                            android:id="@+id/textViewKarboTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10/111Kkal"
+                            android:textColor="#757575"/>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarKarbo"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:progress="60"
+                        android:progressTint="#006064"
+                        android:progressBackgroundTint="#E0E0E0"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Lemak Progress -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lemak"
+                            android:textStyle="bold"
+                            android:textColor="#006064"/>
+
+                        <TextView
+                            android:id="@+id/textViewLemakTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#757575"/>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarLemak"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:progressTint="#006064"
+                        android:progressBackgroundTint="#E0E0E0"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Asupan Air Progress -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Asupan Air"
+                            android:textStyle="bold"
+                            android:textColor="#006064"/>
+
+                        <TextView
+                            android:id="@+id/textViewAirTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10/111Kkal"
+                            android:textColor="#757575"/>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarAir"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:progress="90"
+                        android:progressTint="#006064"
+                        android:progressBackgroundTint="#E0E0E0"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    button -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="16dp"
+            android:background="#FFFFFF">
 
-            <!-- Title -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tugas Sehari-hari"
-                android:textSize="20sp"
-                android:textColor="#005C73"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
-
-            <!-- Card for Konsumsi Air Harian -->
+            <!-- Diet Recipe Guide Button -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewKonsumsiAir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                android:layout_marginBottom="12dp"
+                app:cardElevation="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="onDietRecipeGuideClicked"> <!-- Define this method in your activity/fragment -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="16dp"
-                    android:background="#E0F4F9">
+                    android:background="#FFE4B5">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_air"
-                        android:contentDescription="Water Drop Icon"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/ic_resep"
+                        android:contentDescription="Diet Recipe Icon"
                         android:layout_gravity="center_vertical" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Konsumsi Air Harian"
+                        android:text="Diet Recipe Guide"
+                        android:textColor="#FF8C00"
                         android:textSize="18sp"
-                        android:textColor="#005C73"
-                        android:layout_gravity="center_vertical"
-                        android:paddingStart="12dp" />
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:paddingStart="16dp" />
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/detail"
-                        android:contentDescription="Arrow Icon"
+                        android:contentDescription="Arrow"
                         android:layout_gravity="center_vertical" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Card for Mengukur Data Tubuh -->
+            <!-- Food Tracker Button -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewMengukurTubuh"
+                android:id="@+id/cardViewFoodTracker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
+                app:cardElevation="4dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onMengukurDataTubuhClicked">
+                android:onClick="openFoodTrackerActivity"> <!-- Define this method in your activity/fragment -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="16dp"
-                    android:background="#FFF4D6">
+                    android:background="#ADD8E6"
+                    >
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/badan"
-                        android:contentDescription="Body Measure Icon"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/tracker"
+                        android:contentDescription="Food Tracker Icon"
                         android:layout_gravity="center_vertical" />
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:paddingStart="12dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mengukur data tubuh"
-                            android:textSize="18sp"
-                            android:textColor="#4A4A4A" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="69.6kg / 50.0kg"
-                            android:textSize="16sp"
-                            android:textColor="#FF8C00" />
-                    </LinearLayout>
+                        android:text="Food Tracker"
+                        android:textColor="@color/biru"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp" />
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/detail"
-                        android:contentDescription="Arrow Icon"
+                        android:contentDescription="Arrow"
                         android:layout_gravity="center_vertical" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="16dp"
+            android:background="#FFFFFF">
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
 
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tugas Sehari-hari"
+                    android:textSize="20sp"
+                    android:textColor="#005C73"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Card for Konsumsi Air Harian -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewKonsumsiAir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#E0F4F9">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_air"
+                            android:contentDescription="Water Drop Icon"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Konsumsi Air Harian"
+                            android:textSize="18sp"
+                            android:textColor="#005C73"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="12dp" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/detail"
+                            android:contentDescription="Arrow Icon"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card for Mengukur Data Tubuh -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewMengukurTubuh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="onMengukurDataTubuhClicked">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFF4D6">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/badan"
+                            android:contentDescription="Body Measure Icon"
+                            android:layout_gravity="center_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mengukur data tubuh"
+                                android:textSize="18sp"
+                                android:textColor="#4A4A4A" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="69.6kg / 50.0kg"
+                                android:textSize="16sp"
+                                android:textColor="#FF8C00" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/detail"
+                            android:contentDescription="Arrow Icon"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

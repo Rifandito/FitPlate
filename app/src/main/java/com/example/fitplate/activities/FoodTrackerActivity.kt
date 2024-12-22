@@ -65,12 +65,12 @@ class FoodTrackerActivity : AppCompatActivity() {
             }
         }
 
-        // button back ke home
+        // button back ke journal
         binding.FoodTrackToJournal.setOnClickListener {
             val intent = Intent(this, FoodJournalActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
-            finish() // Ensure FoodJournalActivity is removed from the back stack
+            finish() // Ensure FoodTrackerActivity is removed from the back stack
         }
     }
 

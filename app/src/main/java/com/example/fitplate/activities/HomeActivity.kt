@@ -1,5 +1,6 @@
 package com.example.fitplate.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -153,6 +154,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateNutritionUI() {
         binding.apply {
             textViewKaloriTarget.text = "${decimalFormat.format(progressCalorie ?: 0.0)}/${decimalFormat.format(targetCalorie ?: 0.0)} Kkal"
