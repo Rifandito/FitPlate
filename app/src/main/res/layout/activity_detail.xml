@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <!-- Layout Utama -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <!-- Gambar -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/smoothie_bowl"/>
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:text="Salad Buah Rendah Kalori"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Waktu Pembuatan -->
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Waktu Pembuatan: 15 menit"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/tTitleNutrisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Informari Nutrisi"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tNutrisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrisiSmoothieBowl"/>
+
+            <TextView
+                android:id="@+id/tTitleManfaat"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Manfaat"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tManfaat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manfaatSmoothieBowl"/>
+
+            <TextView
+                android:id="@+id/tTitleBahan"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Bahan-bahan"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tBahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bahanSmoothieBowl"/>
+
+            <TextView
+                android:id="@+id/tTitlePembuatan"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Cara Pembuatan"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tPembuatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pembuatanSmoothieBowl"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

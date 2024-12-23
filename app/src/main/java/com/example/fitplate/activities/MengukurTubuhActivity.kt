@@ -11,8 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fitplate.AuthManager
 import com.example.fitplate.R
 import com.example.fitplate.calculators.BadanProgressTracker
-import com.example.fitplate.dataclasses.Makanan
-import com.example.fitplate.dataclasses.User
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -55,7 +53,6 @@ class MengukurTubuhActivity : AppCompatActivity() {
         updateButton.setOnClickListener {
             updateUserProgress(userId)
         }
-
     }
 
     private fun inisialisasiView(){

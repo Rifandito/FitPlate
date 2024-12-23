@@ -1,6 +1,629 @@
 <resources>
-    <string name="app_name">Fitplate</string>
+    <string name="app_name">FitPlate_DienaMs</string>
     <string name="back_button">Back Button</string>
-    <string name="konsumsi1">Back Button</string>
     <string name="deskripsi">akan membantu untuk mencapai pola makan sehat melalui fitur personalisasi kalori, resep rendah kalori, pemantauan nutrisi, dan tantangan interaktif. Dilengkapi gamifikasi, FitPlate menjadikan diet lebih mudah dan menyenangkan.</string>
+    <string name="konsumsi1">Kita semua tahu bahwa tubuh kita sebagian besar terdiri dari air, sekitar 60% dari berat badan kita adalah cairan. Meskipun kita mungkin tidak selalu menyadarinya, air memiliki peran yang sangat vital untuk menjaga agar segala sistem tubuh kita berfungsi dengan baik. Bahkan, dehidrasi ringan pun bisa mempengaruhi kesehatan kita, dari tingkat energi yang rendah hingga gangguan pada konsentrasi. Jadi, mari kita bahas mengapa minum air itu sangat penting dan bagaimana hal ini berhubungan dengan kesejahteraan kita sehari-hari.</string>
+    <string name="konsumsi2">1. Mendukung Fungsi Sel dan Organ \n
+    Air adalah media utama yang memungkinkan tubuh kita untuk melakukan berbagai fungsi biologis yang sangat penting. Setiap sel di tubuh kita membutuhkan air untuk proses metabolisme, transportasi nutrisi, dan pembuangan limbah. Jika tubuh kekurangan air, proses-proses ini bisa terganggu. Misalnya, ginjal kita, yang berfungsi menyaring darah dan membuang racun, membutuhkan air untuk bekerja dengan efisien.
+            Tanpa cukup cairan, ginjal bisa kesulitan menyaring sisa-sisa metabolisme tubuh, yang akhirnya berisiko menyebabkan penumpukan racun atau bahkan kerusakan ginjal.
+
+            2. Menjaga Keseimbangan Cairan Tubuh \n
+            Air juga sangat penting dalam menjaga keseimbangan cairan tubuh. Cairan ini tidak hanya penting untuk menggantikan cairan yang hilang melalui keringat, urine, atau bahkan pernapasan, tetapi juga untuk menjaga keseimbangan elektrolit seperti natrium, kalium, dan kalsium yang berfungsi mengatur tekanan darah dan fungsi otot. Jika tubuh kita tidak cukup air, tubuh akan berusaha mengompensasi dengan mengurangi output urine atau meningkatkan penguapan, yang bisa mengarah pada dehidrasi.
+\n
+            3. Meningkatkan Energi dan Fokus \n
+            Kehilangan sedikit saja cairan tubuh bisa menyebabkan penurunan energi dan gangguan pada fokus kita. Bayangkan saja, saat kita merasa kelelahan dan susah berkonsentrasi, itu bisa jadi bukan hanya karena kurang tidur atau stres, tapi juga karena kita kekurangan air. Dehidrasi ringan dapat menyebabkan kita merasa lemas dan bahkan meningkatkan risiko sakit kepala. Dengan cukup minum air, tubuh akan terhidrasi dengan baik, sehingga membantu kita tetap energik dan fokus sepanjang hari.
+\n
+            4. Membantu Pencernaan dan Menjaga Kulit Sehat \n
+            Air juga memiliki peran penting dalam sistem pencernaan. Jika tubuh kita kekurangan air, pencernaan menjadi lebih sulit, bahkan bisa menyebabkan sembelit. Air membantu melarutkan zat-zat penting yang dibutuhkan untuk proses pencernaan dan membantu memindahkan makanan melalui saluran pencernaan kita.
+\n
+            Selain itu, kulit kita juga sangat bergantung pada asupan cairan. Kulit yang terhidrasi dengan baik akan tampak lebih sehat, kenyal, dan bercahaya. Sebaliknya, kulit yang kekurangan air bisa menjadi kering, kusam, dan rentan terhadap kerutan.
+
+            5. Membantu Menjaga Berat Badan Ideal\n
+            Minum air yang cukup juga bisa membantu dalam menjaga berat badan. Terkadang kita merasa lapar, padahal tubuh kita hanya membutuhkan cairan. Jadi, sebelum meraih camilan, coba cek dulu apakah tubuh Anda sudah cukup terhidrasi. Minum air juga dapat meningkatkan metabolisme tubuh, yang akan membantu proses pembakaran kalori lebih efisien. Selain itu, air tidak mengandung kalori, jadi minum air tidak akan menambah berat badan Anda.
+
+            6. Menjaga Suhu Tubuh\n
+            Salah satu fungsi penting dari air adalah untuk mengatur suhu tubuh. Ketika tubuh kita panas karena aktivitas fisik atau suhu lingkungan yang tinggi, tubuh kita akan berkeringat. Proses ini membantu mendinginkan tubuh, tetapi juga menyebabkan hilangnya cairan. Jika tidak cukup minum air, tubuh kita bisa kesulitan untuk mempertahankan suhu yang stabil, yang pada akhirnya dapat menyebabkan dehidrasi atau bahkan heatstroke (serangan panas).
+
+            \n
+            7. Membantu Detoksifikasi Tubuh\n
+            Air juga memainkan peran besar dalam proses detoksifikasi tubuh. Sistem pencernaan dan ginjal memerlukan cairan untuk membuang racun dan limbah dari tubuh. Semakin cukup air yang kita minum, semakin efisien tubuh dalam mengeluarkan racun. Menghidrasi tubuh dengan baik adalah salah satu cara sederhana untuk mendukung sistem detoks tubuh kita.
+            Berapa Banyak Air yang Harus Diminum?\n
+            Standar yang sering terdengar adalah “8 gelas sehari”, tetapi kebutuhan cairan setiap orang berbeda tergantung pada usia, aktivitas fisik, iklim, dan kondisi kesehatan. Sebagai panduan umum, tubuh kita membutuhkan sekitar 2,5 liter (atau 10 gelas) air per hari, meskipun ini bisa bervariasi. Sebaiknya, perhatikan rasa haus tubuh dan pastikan Anda minum secara teratur sepanjang hari, terutama setelah berolahraga atau berada di tempat yang panas.</string>
+
+
+    <string name="smoothie_title">Smoothie Bowl Protein Tinggi</string>
+    <string name="smoothie_time">20 Menit</string>
+    <string name="nutrisiSmoothieBowl">
+        1. Kalori: 250 kkal \n
+        2. Protein: 20g\n
+        3. Karbohidrat: 30g \n
+        4. Lemak: 10g \n
+        5. Serat: 6g \n
+        6. Gula: 10g (berasal dari bahan alami) \n
+    </string>
+
+    <string name="manfaatSmoothieBowl">
+        1. Sumber Protein: Smoothie bowl ini kaya akan protein yang berasal dari yogurt rendah lemak dan protein powder, membantu memperbaiki dan membangun jaringan otot setelah tidur.\n
+        2. Kesehatan Pencernaan: Kandungan serat yang tinggi dari buah dan granola membantu melancarkan pencernaan dan memberikan rasa kenyang lebih lama.\n
+        3. Antioksidan: Berbagai buah beri seperti blueberry dan strawberry mengandung antioksidan yang baik untuk melawan radikal bebas dalam tubuh, mendukung sistem kekebalan tubuh yang lebih kuat.\n
+        4. Energizing: Kandungan karbohidrat kompleks dari oats memberikan energi yang bertahan lebih lama, cocok untuk memulai hari dengan semangat.\n \n
+    </string>
+
+    <string name="bahanSmoothieBowl">
+        1. 1/2 cangkir yogurt Yunani rendah lemak \n
+        2. 1 scoop protein powder vanila (bisa diganti dengan whey protein atau plant-based protein) \n
+        3. 1/2 cangkir buah beku (blueberry, strawberry, atau pisang) \n
+        4. 1/4 cangkir oatmeal (pilih yang rolled oats untuk tekstur lebih baik) \n
+        5. 1 sdm biji chia atau flaxseeds \n
+        6. 1/2 cangkir air kelapa atau susu almond \n
+        7. Topping: granola rendah gula, irisan buah segar (pisang, kiwi, stroberi) \n \n
+
+    </string>
+
+    <string name="pembuatanSmoothieBowl">
+        1. Masukkan yogurt, protein powder, buah beku, oatmeal, dan air kelapa atau susu almond ke dalam blender. \n
+        2. Blender hingga halus dan bertekstur creamy. \n
+        3. Tuangkan smoothie ke dalam mangkuk. \n
+        4. Tambahkan topping granola, irisan buah segar, dan biji chia/flaxseeds di atasnya. \n
+        5. Nikmati segera sebagai sarapan yang lezat dan mengenyangkan. \n
+
+    </string>
+
+
+
+    <string name="pancake_title">Pancake Protein dengan Pisang dan Selai Kacang</string>
+    <string name="pancake_time">20 Menit</string>
+    <string name="nutrisiPancake">
+        1. Kalori: 350 kkal \n
+        2. Protein: 22g \n
+        3. Karbohidrat: 30g \n
+        4. Lemak: 18g \n
+        5. Serat: 5g \n
+        6. Gula: 10g (berasal dari pisan dan selai kacang) \n
+
+    </string>
+    <string name="manfaatPancake">
+        1. Sumber Protein: Pancake ini mengandung protein tinggi dari tepung protein dan telur, mendukung pemulihan otot dan pertumbuhan jaringan. \n
+        2. Energi Cepat: Pisang sebagai topping memberikan karbohidrat alami yang cepat diserap tubuh untuk energi yang instan. \n
+        3. Lemak Sehat: Selai kacang menambah lemak sehat yang mendukung keseimbangan hormon dan meningkatkan rasa kenyang. \n
+    </string>
+
+    <string name="bahanPancake">
+        1. 1/2 cangkir tepung protein (bisa menggunakan whey atau protein nabati) \n
+        2. 1 butir telur \n
+        3. 1/4 cangkir susu almond \n
+        4. 1/2 pisang, haluskan \n
+        5. 1 sdt baking powder \n
+        6. 1/2 sdt vanili \n
+        7. 1 sdm selai kacang alami (tanpa tambahan gula) \n
+        8. Topping: irisan pisang dan sedikit sirup maple (opsional) \n
+
+    </string>
+
+    <string name="pembuatanPancake">
+        1. Campurkan tepung protein, telur, susu almond, pisang haluskan, baking powder, dan vanili di dalam mangkuk. Aduk rata hingga adonan tidak bergerindil. \n
+        2. Panaskan wajan anti lengket dengan sedikit minyak kelapa atau spray minyak. \n
+        3. Tuang satu sendok sayur adonan ke wajan, masak selama 2-3 menit di setiap sisi hingga berwarna kecoklatan. \n
+        3. Sajikan pancake dengan topping irisan pisang dan selai kacang. \n
+
+    </string>
+
+    <string name="toastAlpukat_title">Toast Alpukat dengan Telur Rebus</string>
+    <string name="toastAlpukat_time">20 Menit</string>
+    <string name="nutrisiToastAlpukat">
+        1. Kalori: 280 kkal \n
+        2. Protein: 14g \n
+        3. Karbohidrat: 30g \n
+        4. Lemak: 16g \n
+        5. Serat: 7g \n
+        6. Gula: 4g \n
+    </string>
+    <string name="manfaatToastAlpukat">
+        1. Lemak Sehat dan Protein: Alpukat menyediakan lemak sehat yang bermanfaat untuk kesehatan jantung, sementara telur memberikan protein berkualitas tinggi untuk mendukung otot dan jaringan. \n
+        2. Serat Pencernaan: Roti gandum utuh kaya akan serat yang membantu pencernaan dan menjaga rasa kenyang lebih lama. \n
+        3. Antioksidan dan Vitamin: Alpukat mengandung vitamin E dan K, yang mendukung kesehatan kulit dan fungsi tubuh yang optimal. \n
+
+    </string>
+    <string name="bahanToastAlpukat">
+        1. 1 iris roti gandum utuh \n
+        2. 1/2 buah alpukat, hancurkan \n
+        3. 1 butir telur, rebus \n
+        4. Garam dan merica secukupnya \n
+        5. 1 sdt perasan lemon (opsional) \n
+
+    </string>
+    <string name="pembuatanToastAlpukat">
+        1. Panggang roti gandum utuh hingga kecoklatan. \n
+        2. Sementara itu, rebus telur hingga matang (sekitar 7-8 menit untuk telur rebus medium). \n
+        3. Setelah roti matang, oleskan alpukat yang sudah dihancurkan ke atasnya. \n
+        4. Tambahkan telur rebus di atas alpukat dan taburkan sedikit garam dan merica. \n
+        5. Jika suka, peras sedikit lemon di atasnya untuk rasa segar. \n
+
+    </string>
+
+    <string name="omeletSayurAvocado_title">Omeley Sayur dan Avocado</string>
+    <string name="omeletSayurAvocado_time">20 Menit</string>
+    <string name="nutrisiOmeletSayurAvocado">
+        1. Kalori: 280 kkal \n
+        2. Protein: 18g \n
+        3. Karbohidrat: 10g \n
+        4. Lemak: 20g \n
+        5. Serat: 6g \n
+        6. Gula: 3g (berasal dari sayuran) \n
+    </string>
+    <string name="manfaatOmeletSayurAvocado">
+        1. Kaya Protein dan Lemak Sehat: Omelet ini mengandung protein tinggi dari telur dan lemak sehat dari alpukat, memberikan rasa kenyang lebih lama dan mendukung pertumbuhan otot. \n
+        2. Sumber Serat: Sayuran hijau seperti bayam dan tomat memberikan serat yang baik untuk pencernaan dan kesehatan usus. \n
+        3. Kesehatan Jantung: Lemak sehat dari alpukat dan minyak zaitun membantu mendukung kesehatan jantung dengan menurunkan kolesterol jahat. \n
+        4. Antioksidan: Tomat dan bayam kaya akan antioksidan yang membantu melawan peradangan dan menjaga kesehatan kulit. \n
+    </string>
+    <string name="bahanOmeletSayurAvocado">
+        1. 2 butir telur (gunakan telur organik atau bebas hormon untuk pilihan yang lebih sehat) \n
+        1. 1/2 buah alpukat, potong dadu \n
+        2. 1/2 cangkir bayam segar \n
+        3. 1/4 cangkir tomat, potong dadu \n
+        4. 1/4 cangkir paprika merah, potong dadu \n
+        5. 1 sdm minyak zaitun (untuk memasak) \n
+        6. Garam dan merica secukupnya \n
+        7. Taburan keju parut rendah lemak (opsional) \n
+        8. 1 iris roti gandum utuh (untuk tambahan serat dan karbohidrat kompleks) \n
+
+    </string>
+    <string name="pembuatanOmeletSayurAvocado">
+        1. Panaskan minyak zaitun di atas wajan dengan api sedang. \n
+        2. Tumis bayam, tomat, dan paprika merah hingga layu dan empuk, sekitar 2-3 menit. \n
+        3. Kocok telur di mangkuk, tambahkan garam dan merica secukupnya. \n
+        4. Tuangkan telur kocok ke atas sayuran yang sudah ditumis di wajan, lalu biarkan sedikit mengeras. \n
+        5. Setelah sisi bawah omelet mulai mengeras, lipat omelet menjadi setengah dan masak hingga matang sempurna. \n
+        6. Sajikan omelet dengan potongan alpukat di atasnya dan roti gandum sebagai pendamping. \n
+        7. Tambahkan taburan keju parut rendah lemak jika suka. \n
+
+    </string>
+
+    <string name="ayamPanggangSayuran_title">Salad Ayam Panggang dengan Quinoa dan Sayuran</string>
+    <string name="ayamPanggangSayuran_time">20 Menit</string>
+    <string name="nutrisiAyamPanggangSayuran">
+        1. Kalori: 350 kkal \n
+        2. Protein: 30g \n
+        3. Karbohidrat: 35g \n
+        4. Lemak: 12g \n
+        5. Serat: 8g \n
+
+    </string>
+    <string name="manfaatAyamPanggangSayuran">
+        1. Protein Tinggi: Ayam panggang dan quinoa memberikan protein yang mendukung pembentukan otot dan menjaga rasa kenyang. \n
+        2. Karbohidrat Sehat: Quinoa adalah sumber karbohidrat kompleks yang memberikan energi tahan lama tanpa lonjakan gula darah. \n
+        3. Antioksidan: Sayuran segar seperti tomat dan mentimun kaya akan vitamin dan antioksidan yang mendukung kesehatan kulit dan sistem imun. \n
+    </string>
+    <string name="bahanAyamPanggangSayuran">
+        1. 100g dada ayam fillet, panggang dan potong dadu \n
+        2. 1/2 cangkir quinoa yang sudah dimasak \n
+        3. 1/2 cangkir tomat ceri, belah dua \n
+        4. 1/4 cangkir mentimun, iris tipis \n
+        5. 1/4 cangkir paprika merah, iris tipis \n
+        6. 1 sdm minyak zaitun \n
+        7. 1 sdt perasan lemon \n
+        8. Garam dan merica secukupnya \n
+
+    </string>
+    <string name="pembuatanAyamPanggangSayuran">
+        1. Panggang dada ayam dengan sedikit minyak zaitun, garam, dan merica hingga matang. \n
+        2. Campurkan quinoa, sayuran, dan ayam panggang dalam mangkuk. \n
+        3. Tambahkan minyak zaitun dan perasan lemon, aduk rata. \n
+        4. Sajikan segera. \n
+    </string>
+
+    <string name="tumisTofu_title">Tumis Tofu dengan Brokoli dan Kacang Almond</string>
+    <string name="tumisTofu_time">20 Menit</string>
+    <string name="nutrisiTumisTofu">
+        1. Kalori: 280 kkal\n
+        2. Protein: 15g\n
+        3. Karbohidrat: 20g\n
+        4. Lemak: 18g\n
+        5. Serat: 7g
+    </string>
+        <string name="manfaatTumisTofu">
+        1. Sumber Protein Nabati: Tofu dan kacang almond adalah pilihan protein nabati yang baik untuk diet.\n
+        2. Lemak Sehat: Kacang almond mengandung lemak sehat yang mendukung kesehatan jantung dan membantu mengurangi peradangan.\n
+        3. Pencernaan Lancar: Brokoli kaya akan serat dan membantu memperlancar pencernaan. \n
+    </string>
+        <string name="bahanTumisTofu">
+        1. 150g tofu, potong dadu\n
+        2. 1 cangkir brokoli, kukus\n
+        3. 1 sdm minyak zaitun\n
+        4. 1/4 cangkir kacang almond, panggang\n
+        5. 1 sdt kecap tamari (opsional)\n
+        6. 1 siung bawang putih, cincang\n
+        7. Garam dan merica secukupnya \n
+    </string>
+        <string name="pembuatanTumisTofu">
+        1. Tumis bawang putih dengan minyak zaitun hingga harum.\n
+        2. Masukkan tofu dan tumis hingga kecoklatan.\n
+        3. Tambahkan brokoli kukus dan kacang almond, aduk rata.\n
+        4. Tambahkan kecap tamari (jika digunakan) dan bumbui dengan garam dan merica.\n
+        5. Sajikan hangat. \n
+    </string>
+
+
+    <string name="saladTuna_title">Salad Tuna dengan Alpukat dan Bayam</string>
+    <string name="saladTuna_time">20 Menit</string>
+    <string name="nutrisiSaladTuna">
+        1. Kalori: 350 kkal \n
+        2. Protein: 25g \n
+        3. Karbohidrat: 10g \n
+        4. Lemak: 20g \n
+        5. Serat: 7g \n
+
+    </string>
+    <string name="manfaatSaladTuna">
+        1. Sumber Omega-3: Tuna dan alpukat adalah sumber lemak sehat omega-3 yang baik untuk kesehatan jantung. \n
+        2. Kaya Protein: Tuna adalah sumber protein berkualitas tinggi yang mendukung metabolisme dan pembentukan otot. \n
+        3. Mengurangi Peradangan: Alpukat mengandung antioksidan dan lemak sehat yang baik untuk mengurangi peradangan dalam tubuh. \n
+    </string>
+    <string name="bahanSaladTuna">
+        1. 1 kaleng tuna (dalam air), tiriskan \n
+        2. 1/2 buah alpukat, potong dadu \n
+        3. 2 cangkir bayam segar \n
+        4. 1/4 cangkir tomat ceri, belah dua \n
+        5. 1 sdm minyak zaitun \n
+        6. 1 sdt perasan lemon \n
+        7. Garam dan merica secukupnya \n
+    </string>
+    <string name="pembuatanSaladTuna">
+        1. Campurkan tuna, bayam, tomat, dan alpukat dalam mangkuk besar. \n
+        2. Tambahkan minyak zaitun, perasan lemon, garam, dan merica. \n
+        3. Aduk rata dan sajikan. \n
+    </string>
+
+
+    <string name="cauliflower_title">Smoothie Bowl Protein Tinggi</string>
+    <string name="cauliflower_time">20 Menit</string>
+    <string name="nutrisiCauliflower">
+        1. Kalori: 350 kkal\n
+        2. Protein: 30g\n
+        3. Karbohidrat: 20g\n
+        4. Lemak: 15g\n
+        5. Serat: 6g
+    </string>
+        <string name="manfaatCauliflower">
+        1. Low-Carb Option: Nasi cauliflower menggantikan nasi biasa, rendah kalori dan karbohidrat.\n
+        2. Protein Sapi: Daging sapi menyediakan protein yang sangat berguna untuk pemulihan otot.\n
+        3. Serat: Sayuran membantu pencernaan dan memberikan rasa kenyang lebih lama.
+    </string>
+        <string name="bahanCauliflower">
+        1. 200g daging sapi giling rendah lemak\n
+        2. 1 cangkir kembang kol (cauliflower), parut halus\n
+        3. 1/2 cangkir paprika merah, potong dadu\n
+        4. 1/2 cangkir wortel, serut halus\n
+        5. 1 sdm minyak zaitun\n
+        6. 1 siung bawang putih, cincang\n
+        7. Garam dan merica secukupnya \n
+    </string>
+        <string name="pembuatanCauliflower">
+        1. Tumis bawang putih dengan minyak zaitun hingga harum.\n
+        2. Masukkan daging sapi giling, masak hingga kecoklatan.\n
+        3. Tambahkan paprika dan wortel, masak hingga sayuran empuk.\n
+        4. Tambahkan kembang kol parut, aduk rata, dan masak hingga kembang kol sedikit layu.\n
+        5. Bumbui dengan garam dan merica sesuai selera. \n
+    </string>
+
+
+    <string name="supSayuran_title">Sup Sayuran dengan Tempe dan Miso</string>
+    <string name="supSayuran_time">20 Menit</string>
+    <string name="nutrisiSupSayuran">
+        1. Kalori: 270 kkal\n
+        2. Protein: 18g\n
+        3. Karbohidrat: 20g\n
+        4. Lemak: 12g\n
+        5. Serat: 7g \n
+    </string>
+        <string name="manfaatSupSayuran">
+        1. Sumber Protein Nabati: Tempe memberikan protein nabati yang bermanfaat untuk otot dan metabolisme.\n
+        2. Mendukung Pencernaan: Miso mengandung probiotik yang membantu meningkatkan kesehatan pencernaan.\n
+        3. Vitamin dan Mineral: Sayuran seperti wortel, kubis, dan bawang bombay kaya akan vitamin dan mineral yang mendukung kekebalan tubuh.
+    </string>
+        <string name="bahanSupSayuran">
+        1. 100g tempe, potong dadu\n
+        2. 2 cangkir kaldu sayuran rendah natrium\n
+        3. 1/2 cangkir wortel, iris tipis\n
+        4. 1/2 cangkir kubis, iris halus\n
+        5. 1 sdm pasta miso\n
+        6. 1 siung bawang putih, cincang\n
+        7. 1 sdt minyak wijen
+    </string>
+        <string name="pembuatanSupSayuran">
+        1. Tumis bawang putih dengan minyak wijen hingga harum.\n
+        2. Tambahkan tempe dan masak hingga kecoklatan.\n
+        3. Masukkan kaldu sayuran, wortel, dan kubis, didihkan.\n
+        4. Setelah sayuran empuk, larutkan pasta miso dengan sedikit kaldu, lalu tambahkan ke dalam sup.\n
+        5. Aduk rata dan masak selama 2-3 menit, sajikan hangat.
+    </string>
+
+
+    <string name="salmonPanggang_title">Salmon Panggang dengan Sayuran Kukus</string>
+    <string name="salmonPanggang_time">20 Menit</string>
+    <string name="nutrisiSalmonPanggang">
+        1. Kalori: 350 kkal\n
+        2. Protein: 30g\n
+        3. Karbohidrat: 10g\n
+        4. Lemak: 22g\n
+        5. Serat: 4g
+    </string>
+        <string name="manfaatSalmonPanggang">
+        1. Omega-3 untuk Jantung: Salmon kaya akan omega-3 yang bermanfaat untuk kesehatan jantung dan mengurangi peradangan.\n
+        2. Penuh Protein Berkualitas: Protein dari salmon membantu memperbaiki dan membangun otot.\n
+        3. Kaya Antioksidan: Sayuran seperti brokoli dan wortel mengandung vitamin dan antioksidan yang mendukung sistem imun.
+    </string>
+        <string name="bahanSalmonPanggang">
+        1. 150g fillet salmon\n
+        2. 1 cangkir brokoli, kukus\n
+        3. 1/2 cangkir wortel, kukus\n
+        4. 1 sdt minyak zaitun\n
+        5. Garam, merica, dan lemon secukupnya
+    </string>
+        <string name="pembuatanSalmonPanggang">
+        1. Panaskan oven pada suhu 180°C. Lumuri fillet salmon dengan sedikit minyak zaitun, garam, merica, dan perasan lemon.\n
+        2. Panggang salmon selama 12-15 menit atau hingga matang.\n
+        3. Sementara itu, kukus brokoli dan wortel hingga empuk.\n
+        4. Sajikan salmon dengan sayuran kukus.
+    </string>
+
+        <string name="zucchini_title">Zucchini Noodles dengan Daging Sapi Tumis</string>
+        <string name="zucchini_time">20 Menit</string>
+        <string name="nutrisiZucchini">
+        1. Kalori: 280 kkal\n
+        2. Protein: 25g\n
+        3. Karbohidrat: 12g\n
+        4. Lemak: 15g\n
+        5. Serat: 6g
+    </string>
+        <string name="manfaatZucchini">
+        1. Alternatif Pasta Sehat: Zucchini noodles (zoodles) adalah pengganti pasta rendah kalori dan karbohidrat, cocok untuk diet rendah karbohidrat.\n
+        2. Protein Daging Sapi: Daging sapi memberikan protein yang mendukung pembentukan otot.\n
+        3. Serat: Zucchini kaya akan serat yang mendukung pencernaan.
+    </string>
+        <string name="bahanZucchini">
+        1. 150g daging sapi giling rendah lemak\n
+        2. 2 zucchini, spiralized (dijadikan mie)\n
+        3. 1 sdt minyak zaitun\n
+        4. 1/2 cangkir tomat ceri, belah dua\n
+        5. 1 siung bawang putih, cincang\n
+        6. Garam, merica, dan daun basil secukupnya
+    </string>
+        <string name="pembuatanZucchini">
+        1. Tumis bawang putih dengan minyak zaitun hingga harum.\n
+        2. Tambahkan daging sapi giling, masak hingga kecoklatan.\n
+        3. Masukkan tomat ceri dan zoodles, aduk rata dan masak selama 3-5 menit.\n
+        4. Bumbui dengan garam, merica, dan daun basil.\n
+        5. Sajikan hangat.
+    </string>
+
+    <string name="supAyamSayuran_title">Sup Ayam Sayuran</string>
+    <string name="supAyamSayuran_time">20 Menit</string>
+    <string name="nutrisiSupAyamSayuran">
+        1. Kalori: 220 kkal\n
+        2. Protein: 20g\n
+        3. Karbohidrat: 15g\n
+        4. Lemak: 8g\n
+        5. Serat: 5g
+    </string>
+        <string name="manfaatSupAyamSayuran">
+        1. Kaya Protein: Ayam adalah sumber protein yang mendukung pertumbuhan otot dan memperbaiki jaringan.\n
+        2. Kaya Serat: Sayuran seperti wortel dan selada memberikan serat yang membantu pencernaan.\n
+        3. Menghangatkan Tubuh: Sup ini cocok untuk makan malam yang menenangkan dan menghangatkan tubuh.
+    </string>
+        <string name="bahanSupAyamSayuran">
+        1. 150g dada ayam, rebus dan suwir\n
+        2. 1/2 cangkir wortel, iris tipis\n
+        3. 1/2 cangkir daun selada, sobek-sobek\n
+        4. 1/4 cangkir seledri, iris tipis\n
+        5. 3 cangkir kaldu ayam rendah natrium\n
+        6. 1 siung bawang putih, cincang\n
+        7. Garam dan merica secukupnya
+    </string>
+        <string name="pembuatanSupAyamSayuran">
+        1. Rebus dada ayam hingga matang, kemudian suwir-suwir daging ayam.\n
+        2. Dalam panci, tumis bawang putih dengan sedikit minyak hingga harum.\n
+        3. Tambahkan kaldu ayam, wortel, selada, dan seledri, masak selama 10-15 menit.\n
+        4. Masukkan ayam suwir dan bumbui dengan garam dan merica.\n
+        5. Sajikan hangat.
+    </string>
+
+        <string name="tofuBrokoli_title">Tofu dan Brokoli Tumis dengan Saus Kedelai</string>
+        <string name="tofuBrokoli_time">20 Menit</string>
+        <string name="nutrisiTofuBrokoli">
+        1. Kalori: 250 kkal\n
+        2. Protein: 15g\n
+        3. Karbohidrat: 12g\n
+        4. Lemak: 18g\n
+        5. Serat: 6g
+    </string>
+        <string name="manfaatTofuBrokoli">
+        1. Protein Nabati: Tofu adalah sumber protein nabati yang baik untuk diet vegetarian atau vegan.\n
+        2. Kaya Lemak Sehat: Minyak wijen dan kecap kedelai menambah lemak sehat yang mendukung keseimbangan hormon.\n
+        3. Kaya Serat: Brokoli memberikan serat tinggi yang mendukung pencernaan.
+    </string>
+        <string name="bahanTofuBrokoli">
+        1. 150g tofu, potong dadu\n
+        2. 1 cangkir brokoli, kukus\n
+        3. 1 sdt minyak wijen\n
+        4. 1 sdm kecap kedelai rendah natrium\n
+        5. 1 siung bawang putih, cincang\n
+        6. 1/2 sdt jahe parut\n
+        7. Garam dan merica secukupnya
+    </string>
+        <string name="pembuatanTofuBrokoli">
+        1. Tumis bawang putih dan jahe dengan minyak wijen hingga harum.\n
+        2. Masukkan tofu dan tumis hingga kecoklatan.\n
+        3. Tambahkan brokoli kukus dan kecap kedelai, aduk rata.\n
+        4. Bumbui dengan garam dan merica sesuai selera.\n
+        5. Sajikan hangat.
+    </string>
+
+        <string name="ayamPanggangSalad_title">Ayam Panggang dengan Salad Avokad dan Tomat</string>
+        <string name="ayamPanggangSalad_time">20 Menit</string>
+        <string name="nutrisiAyamPanggangSalad">
+        1. Kalori: 320 kkal\n
+        2. Protein: 28g\n
+        3. Karbohidrat: 10g\n
+        4. Lemak: 22g\n
+        5. Serat: 6g
+    </string>
+        <string name="manfaatAyamPanggangSalad">
+        1. Protein Ayam: Dada ayam panggang menyediakan protein tinggi yang baik untuk pertumbuhan otot.\n
+        2. Lemak Sehat: Alpukat memberikan lemak sehat yang mendukung kesehatan jantung.\n
+        3. Antioksidan: Tomat kaya akan lycopene, yang mendukung kesehatan kulit dan sistem kekebalan tubuh.
+    </string>
+        <string name="bahanAyamPanggangSalad">
+        1. 150g dada ayam fillet\n
+        2. 1/2 buah alpukat, potong dadu\n
+        3. 1/2 cangkir tomat ceri, belah dua\n
+        4. 1 sdm minyak zaitun\n
+        5. 1 sdt perasan lemon\n
+        6. Garam dan merica secukupnya
+    </string>
+        <string name="pembuatanAyamPanggangSalad">
+        1. Panggang dada ayam yang sudah dibumbui dengan garam, merica, dan minyak zaitun selama 12-15 menit atau hingga matang.\n
+        2. Campurkan alpukat, tomat, dan perasan lemon dalam mangkuk.\n
+        3. Sajikan ayam panggang dengan salad alpukat di sampingnya.
+    </string>
+
+
+    <!-- Resep 1: Energy Balls Coklat dan Almond -->
+    <string name="energyBalls_title">Energy Balls Coklat dan Almond</string>
+    <string name="energyBalls_time">20 Menit</string>
+    <string name="nutrisiEnergyBalls">
+        Kalori: 90 kkal\n
+        Protein: 3g\n
+        Karbohidrat: 8g\n
+        Lemak: 6g\n
+        Serat: 2g
+    </string>
+    <string name="manfaatEnergyBalls">
+        Sumber Energi Cepat: Almond dan coklat hitam memberikan energi yang tahan lama tanpa lonjakan gula darah.\n
+        Kaya Lemak Sehat: Almond mengandung lemak sehat yang mendukung kesehatan jantung.\n
+        Sumber Serat: Bahan-bahan ini membantu pencernaan dan membuat perut kenyang lebih lama.
+    </string>
+    <string name="bahanEnergyBalls">
+        - 1/2 cangkir almond, cincang kasar\n
+        - 1/4 cangkir oats (rolled oats)\n
+        - 2 sdm bubuk kakao tanpa gula\n
+        - 1 sdm madu atau sirup maple\n
+        - 1 sdm minyak kelapa (cair)\n
+        - 1/2 sdt ekstrak vanila
+    </string>
+    <string name="pembuatanEnergyBalls">
+        1. Campurkan semua bahan dalam mangkuk besar dan aduk hingga rata.\n
+        2. Bentuk campuran tersebut menjadi bola-bola kecil dengan tangan (sekitar 1 inci diameter).\n
+        3. Dinginkan di lemari es selama 30 menit sebelum disajikan.
+    </string>
+
+    <!-- Resep 2: Smoothie Bowl Pisang dan Berry -->
+    <string name="smoothieBowlPisang_title">Smoothie Bowl Pisang dan Berry</string>
+    <string name="smoothieBowlPisang_time">20 Menit</string>
+    <string name="nutrisiSmoothieBowlPisang">
+        Kalori: 150 kkal\n
+        Protein: 3g\n
+        Karbohidrat: 35g\n
+        Lemak: 1g\n
+        Serat: 5g
+    </string>
+    <string name="manfaatSmoothieBowlPisang">
+        Kaya Antioksidan: Berry mengandung antioksidan tinggi yang baik untuk melawan radikal bebas.\n
+        Serat Tinggi: Pisang dan beri memberikan serat yang membantu pencernaan.\n
+        Menyegarkan dan Menghidrasi: Smoothie bowl ini adalah cemilan yang menyegarkan dan hidrasi.
+    </string>
+    <string name="bahanSmoothieBowlPisang">
+        - 1 buah pisang beku\n
+        - 1/2 cangkir campuran beri beku (blueberry, strawberry, raspberry)\n
+        - 1/2 cangkir yogurt Yunani tanpa pemanis\n
+        - 1/4 cangkir air kelapa atau susu almond\n
+        - Topping: granola rendah gula, biji chia, atau irisan buah segar
+    </string>
+    <string name="pembuatanSmoothieBowlPisang">
+        1. Blender pisang, beri, yogurt, dan air kelapa hingga halus.\n
+        2. Tuangkan smoothie ke dalam mangkuk dan beri topping granola, biji chia, atau irisan buah sesuai selera.
+    </string>
+
+    <!-- Resep 3: Keripik Kale Panggang -->
+    <string name="keripik_title">Keripik Kale Panggang</string>
+    <string name="keripik_time">20 Menit</string>
+    <string name="nutrisiKeripik">
+        Kalori: 80 kkal\n
+        Protein: 3g\n
+        Karbohidrat: 10g\n
+        Lemak: 4g\n
+        Serat: 3g
+    </string>
+    <string name="manfaatKeripik">
+        Superfood: Kale adalah sayuran hijau kaya vitamin, mineral, dan antioksidan.\n
+        Kaya Serat: Membantu pencernaan dan memberikan rasa kenyang lebih lama.\n
+        Alternatif Cemilan Sehat: Sebagai pengganti keripik kentang, keripik kale ini rendah kalori dan penuh gizi.
+    </string>
+    <string name="bahanKeripik">
+        - 2 cangkir kale, potong kecil-kecil\n
+        - 1 sdt minyak zaitun\n
+        - Garam dan merica secukupnya\n
+        - 1/2 sdt bubuk bawang putih (opsional)
+    </string>
+    <string name="pembuatanKeripik">
+        1. Panaskan oven pada suhu 180°C.\n
+        2. Cuci dan keringkan kale dengan baik, kemudian campurkan dengan minyak zaitun, garam, merica, dan bubuk bawang putih.\n
+        3. Sebar kale di atas loyang dan panggang selama 10-15 menit, atau hingga krispi. Perhatikan agar tidak terbakar.
+    </string>
+
+    <!-- Resep 4: Greek Yogurt dengan Madu dan Kacang-Kacangan -->
+    <string name="greek_title">Greek Yogurt dengan Madu dan Kacang-Kacangan</string>
+    <string name="greek_time">20 Menit</string>
+    <string name="nutrisiGreek">
+        Kalori: 160 kkal\n
+        Protein: 8g\n
+        Karbohidrat: 18g\n
+        Lemak: 7g\n
+        Serat: 2g
+    </string>
+    <string name="manfaatGreek">
+        Sumber Protein: Yogurt Yunani adalah sumber protein yang baik, membantu membangun otot dan mendukung metabolisme.\n
+        Lemak Sehat: Kacang-kacangan memberikan lemak sehat yang baik untuk jantung.\n
+        Meningkatkan Pencernaan: Probiotik dalam yogurt mendukung kesehatan pencernaan.
+    </string>
+    <string name="bahanGreek">
+        - 1/2 cangkir yogurt Yunani tanpa pemanis\n
+        - 1 sdm madu\n
+        - 1 sdm kacang almond atau kenari cincang\n
+        - 1/2 sdt kayu manis (opsional)
+    </string>
+    <string name="pembuatanGreek">
+        1. Tempatkan yogurt dalam mangkuk kecil.\n
+        2. Tambahkan madu, kacang cincang, dan taburkan kayu manis di atasnya.\n
+        3. Nikmati segera.
+    </string>
+
+    <!-- Resep 5: Edamame Rebus dengan Garam Laut -->
+    <string name="edamame_title">Edamame Rebus dengan Garam Laut</string>
+    <string name="edamame_time">20 Menit</string>
+    <string name="nutrisiEdamame">
+        Kalori: 120 kkal\n
+        Protein: 12g\n
+        Karbohidrat: 10g\n
+        Lemak: 5g\n
+        Serat: 5g
+    </string>
+    <string name="manfaatEdamame">
+        Protein Nabati: Edamame adalah sumber protein nabati yang baik, cocok untuk diet vegetarian dan vegan.\n
+        Serat Tinggi: Membantu pencernaan dan memberikan rasa kenyang.\n
+        Kaya Mikronutrien: Edamame mengandung berbagai vitamin dan mineral penting seperti vitamin K, folat, dan zat besi.
+    </string>
+    <string name="bahanEdamame">
+        - 1/2 cangkir edamame beku\n
+        - 1/2 sdt garam laut kasar\n
+        - Air untuk merebus
+    </string>
+    <string name="pembuatanEdamame">
+        1. Rebus edamame dalam air mendidih selama 5-7 menit, hingga empuk.\n
+        2. Tiriskan edamame dan taburi dengan garam laut kasar.\n
+        3. Sajikan hangat atau dingin.
+    </string>
+
 </resources>
+

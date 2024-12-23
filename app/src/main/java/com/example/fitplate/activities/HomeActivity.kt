@@ -21,9 +21,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: HomeActivityBinding
 
     private val dbTargetGizi by lazy { RealtimeDatabase.instance().getReference("TargetGiziHarian") }
-    private val dbTargetAir by lazy { RealtimeDatabase.instance().getReference("TargetKonsumsiAir") }
     private val dbProgresGizi by lazy { RealtimeDatabase.instance().getReference("ProgressGiziHarian") }
-    private val dbProgresAir by lazy { RealtimeDatabase.instance().getReference("ProgressKonsumsiAir") }
 
     private lateinit var authManager: AuthManager
 
@@ -40,12 +38,6 @@ class HomeActivity : AppCompatActivity() {
     private var progressProtein: Double? = null
     private var progressKarbo: Double? = null
     private var progressLemak: Double? = null
-
-    // variabel targetAir dari database
-    private var targetAir: Double? =null
-
-    // variabel progresAir dari database
-    private var progressAir: Double? = null
 
     private val decimalFormat = DecimalFormat("#.0") // Satu angka di belakang koma
 
@@ -123,32 +115,6 @@ class HomeActivity : AppCompatActivity() {
             checkDataLoaded()
         }
 
-        // Fetch target air
-        dbTargetAir.child(userId).get().addOnSuccessListener { snapshot ->
-            if (snapshot.exists()) {
-                Log.d("FirebaseDebug", "userId: $userId")
-
-                targetAir = snapshot.child("targetKonsumsiAir").value?.toString()?.toDoubleOrNull()
-                Log.d("FirebaseDebug", "Target Air: $targetAir")
-                //Toast.makeText(this@HomeActivity, "Your ", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this@HomeActivity, "Datamu tidak ketemu", Toast.LENGTH_SHORT).show()
-            }
-            isAirTargetLoaded = true
-            checkDataLoaded()
-        }
-
-        // fetch progres air
-        dbProgresAir.child(userId).child(dateKey).get().addOnSuccessListener { snapshot ->
-            if (snapshot.exists()) {
-                progressAir = snapshot.child("jumlahAir").value?.toString()?.toDoubleOrNull()
-            } else {
-                Toast.makeText(this@HomeActivity, "Jangan lupa minum air putih ya!", Toast.LENGTH_SHORT).show()
-            }
-            isAirProgressLoaded = true
-            checkDataLoaded()
-        }
-
         val progressTracker = BadanProgressTracker()
         progressTracker.fetchUserData(userId, object : BadanProgressTracker.ProgressCallback {
             override fun onSuccess(data: Map<String, Double>) {
@@ -180,18 +146,12 @@ class HomeActivity : AppCompatActivity() {
             textViewProteinTarget.text = "${decimalFormat.format(progressProtein ?: 0.0)}/${decimalFormat.format(targetProtein ?: 0.0)} Kkal"
             textViewKarboTarget.text = "${decimalFormat.format(progressKarbo ?: 0.0)}/${decimalFormat.format(targetKarbo ?: 0.0)} Kkal"
             textViewLemakTarget.text = "${decimalFormat.format(progressLemak ?: 0.0)}/${decimalFormat.format(targetLemak ?: 0.0)} Kkal"
-            textViewAirTarget.text = "${decimalFormat.format(progressAir ?: 0.0)}/${decimalFormat.format(targetAir ?: 0.0)} mL"
 
             progressBarKalori.progress = calculateProgress(progressCalorie, targetCalorie)
             progressBarProtein.progress = calculateProgress(progressProtein, targetProtein)
             progressBarKarbo.progress = calculateProgress(progressKarbo, targetKarbo)
             progressBarLemak.progress = calculateProgress(progressLemak, targetLemak)
-            progressBarAir.progress = calculateProgress(progressAir, targetAir)
         }
-    }
-
-    private fun updateAirUI(){
-
     }
 
     private fun updateBbPreview(data: Map<String, Double>) {
@@ -200,7 +160,6 @@ class HomeActivity : AppCompatActivity() {
         Log.d("UIUpdate", "Updating UI: weight = $weight, targetWeight = $targetWeight")
         binding.tvPreviewBb.text = "$weight kg/ $targetWeight kg"
     }
-
 
     private fun calculateProgress(progress: Double?, target: Double?): Int {
         return if (progress != null && target != null && target > 0) {
@@ -215,8 +174,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupClickListeners() {
-        binding.cardViewKonsumsiAir.setOnClickListener {
-            //navigateToActivity(KonsumsiAirActivity::class.java)
+
+        binding.cardViewDietRecipe.setOnClickListener{
+            navigateToActivity(RecipeActivity::class.java)
         }
 
         binding.cardViewMengukurTubuh.setOnClickListener {

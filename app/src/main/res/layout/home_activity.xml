@@ -261,44 +261,6 @@
                         android:layout_marginTop="4dp"/>
                 </LinearLayout>
 
-                <!-- Asupan Air Progress -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Asupan Air"
-                            android:textStyle="bold"
-                            android:textColor="#006064"/>
-
-                        <TextView
-                            android:id="@+id/textViewAirTarget"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10/111Kkal"
-                            android:textColor="#757575"/>
-                    </LinearLayout>
-
-                    <ProgressBar
-                        android:id="@+id/progressBarAir"
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp"
-                        android:progress="90"
-                        android:progressTint="#006064"
-                        android:progressBackgroundTint="#E0E0E0"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -314,6 +276,7 @@
 
             <!-- Diet Recipe Guide Button -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewDietRecipe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -322,7 +285,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:onClick="onDietRecipeGuideClicked"> <!-- Define this method in your activity/fragment -->
+                android:onClick=""> <!-- Define this method in your activity/fragment -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -432,51 +395,6 @@
                     android:textColor="#005C73"
                     android:textStyle="bold"
                     android:layout_marginBottom="12dp" />
-
-                <!-- Card for Konsumsi Air Harian -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewKonsumsiAir"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    android:layout_marginBottom="12dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:background="#E0F4F9">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:src="@drawable/ic_air"
-                            android:contentDescription="Water Drop Icon"
-                            android:layout_gravity="center_vertical" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Konsumsi Air Harian"
-                            android:textSize="18sp"
-                            android:textColor="#005C73"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="12dp" />
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/detail"
-                            android:contentDescription="Arrow Icon"
-                            android:layout_gravity="center_vertical" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
                 <!-- Card for Mengukur Data Tubuh -->
                 <androidx.cardview.widget.CardView

@@ -67,22 +67,7 @@
 
         </activity>
         <activity
-            android:name=".activities.KonsumsiAirActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
             android:name=".activities.FoodEditActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".activities.ArtikelAirActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".activities.ArtikelKonsumsiActivity"
             android:exported="true">
 
         </activity>
@@ -98,6 +83,16 @@
 <!--        </activity>-->
         <activity
             android:name=".activities.MengukurTubuhActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.RecipeActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".activities.DetailActivity"
             android:exported="true">
 
         </activity>
