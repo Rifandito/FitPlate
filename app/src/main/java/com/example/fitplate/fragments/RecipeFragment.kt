@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitplate.R
 import com.example.fitplate.adapters.RecipeAdapter
-import com.example.fitplate_dienams.Recipe
+import com.example.fitplate.Recipe
 
 class RecipeFragment : Fragment() {
 

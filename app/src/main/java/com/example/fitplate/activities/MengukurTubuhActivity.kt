@@ -27,8 +27,6 @@ class MengukurTubuhActivity : AppCompatActivity() {
     private lateinit var updateButton: Button
     private lateinit var mengukurToHome: ImageButton
 
-    private var currentDate: String = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.update_bb_activity)
@@ -118,10 +116,5 @@ class MengukurTubuhActivity : AppCompatActivity() {
         heightValue.text = "${height} cm"
         weightValue.text = "${weight} kg"
         targetValue.text = "${targetWeight} kg"
-    }
-
-    private fun getCurrentDate(): String {
-        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        return sdf.format(Date())
     }
 }

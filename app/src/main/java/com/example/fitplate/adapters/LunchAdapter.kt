@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitplate.R
-import com.example.fitplate_dienams.Recipe
+import com.example.fitplate.Recipe
 
 class LunchAdapter(
     private val items: List<Recipe>

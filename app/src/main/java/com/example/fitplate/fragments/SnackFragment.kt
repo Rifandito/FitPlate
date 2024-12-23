@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitplate.R
 import com.example.fitplate.activities.DetailActivity
 import com.example.fitplate.adapters.SnackAdapter
-import com.example.fitplate_dienams.Recipe
+import com.example.fitplate.Recipe
 
 class SnackFragment : Fragment() {
 

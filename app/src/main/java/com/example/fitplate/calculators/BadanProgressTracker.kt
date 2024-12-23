@@ -27,12 +27,14 @@ class BadanProgressTracker {
                 if (snapshot.exists()) {
                     val beratBadan = snapshot.child("beratBadan").value?.toString()?.toDoubleOrNull() ?: 0.0
                     val targetBb = snapshot.child("targetBb").value?.toString()?.toDoubleOrNull() ?: 0.0
+                    val bmi = snapshot.child("userBMI").value?.toString()?.toDoubleOrNull() ?: 0.0
                     Log.d("FirebaseDebug", "beratBadan: $beratBadan, targetBb: $targetBb")
 
                     val progress = mapOf(
                         "beratBadan" to beratBadan,
                         "targetBb" to targetBb,
-                        "tinggiBadan" to (snapshot.child("tinggiBadan").value?.toString()?.toDoubleOrNull() ?: 0.0)
+                        "tinggiBadan" to (snapshot.child("tinggiBadan").value?.toString()?.toDoubleOrNull() ?: 0.0),
+                        "userBMI" to bmi
                     )
                     callback.onSuccess(progress)
                 } else {
