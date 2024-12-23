@@ -11,7 +11,7 @@ class BadanProgressTracker {
     private val dbUser = RealtimeDatabase.instance().getReference("users")
 
     interface ProgressCallback {
-        fun onSuccess(data: Map<String, Double>)
+        fun onSuccess(data: Map<String, Any?>)
         fun onFailure(errorMessage: String)
     }
 
@@ -28,13 +28,15 @@ class BadanProgressTracker {
                     val beratBadan = snapshot.child("beratBadan").value?.toString()?.toDoubleOrNull() ?: 0.0
                     val targetBb = snapshot.child("targetBb").value?.toString()?.toDoubleOrNull() ?: 0.0
                     val bmi = snapshot.child("userBMI").value?.toString()?.toDoubleOrNull() ?: 0.0
+                    val nama = snapshot.child("namaLengkap").value?.toString()
                     Log.d("FirebaseDebug", "beratBadan: $beratBadan, targetBb: $targetBb")
 
                     val progress = mapOf(
                         "beratBadan" to beratBadan,
                         "targetBb" to targetBb,
                         "tinggiBadan" to (snapshot.child("tinggiBadan").value?.toString()?.toDoubleOrNull() ?: 0.0),
-                        "userBMI" to bmi
+                        "userBMI" to bmi,
+                        "nama" to nama
                     )
                     callback.onSuccess(progress)
                 } else {

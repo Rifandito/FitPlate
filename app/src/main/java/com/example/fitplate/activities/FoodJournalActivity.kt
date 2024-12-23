@@ -164,9 +164,9 @@ class FoodJournalActivity : AppCompatActivity() {
     private fun updateNutritionUI(data: Map<String, Double>) {
         binding.apply {
             textViewKaloriJournal.text = "${decimalFormat.format(data["jumlahKalori"] ?: 0.0)}/${decimalFormat.format(targetCalorie ?: 0.0)} Kkal"
-            textViewProteinJournal.text = "${decimalFormat.format(data["jumlahProtein"] ?: 0.0)}/${decimalFormat.format(targetProtein ?: 0.0)} Kkal"
-            textViewKarboJournal.text = "${decimalFormat.format(data["jumlahKarbohidrat"] ?: 0.0)}/${decimalFormat.format(targetKarbo ?: 0.0)} Kkal"
-            textViewLemakJournal.text = "${decimalFormat.format(data["jumlahLemak"] ?: 0.0)}/${decimalFormat.format(targetLemak ?: 0.0)} Kkal"
+            textViewProteinJournal.text = "${decimalFormat.format(data["jumlahProtein"] ?: 0.0)}/${decimalFormat.format(targetProtein ?: 0.0)} gram"
+            textViewKarboJournal.text = "${decimalFormat.format(data["jumlahKarbohidrat"] ?: 0.0)}/${decimalFormat.format(targetKarbo ?: 0.0)} gram"
+            textViewLemakJournal.text = "${decimalFormat.format(data["jumlahLemak"] ?: 0.0)}/${decimalFormat.format(targetLemak ?: 0.0)} gram"
 
             progressBarKaloriJournal.progress = calculateProgress(data["jumlahKalori"], targetCalorie)
             progressBarProteinJournal.progress = calculateProgress(data["jumlahProtein"], targetProtein)

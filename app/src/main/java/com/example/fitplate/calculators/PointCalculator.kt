@@ -1,12 +1,10 @@
 package com.example.fitplate.calculators
 
 import com.example.fitplate.RealtimeDatabase
-import com.example.fitplate.dataclasses.UserMedalSum
 
 class PointCalculator {
 
     private val dbPoint = RealtimeDatabase.instance().getReference("Skor")
-    private val dbMedali = RealtimeDatabase.instance().getReference("medali")
     private val dbMedaliUser = RealtimeDatabase.instance().getReference("UserMedalSum")
 
     fun calculateAndAwardMedals(
@@ -37,24 +35,29 @@ class PointCalculator {
     ) {
         dbMedaliUser.child(userId).get().addOnSuccessListener { snapshot ->
             if (snapshot.exists()) {
-                val userMedal = snapshot.getValue(UserMedalSum::class.java)
-                userMedal?.let {
-                    medals.forEach { (medalType, points) ->
-                        when (medalType) {
-                            "emas" -> it.goldCount++
-                            "perak" -> it.silverCount++
-                            "perunggu" -> it.bronzeCount++
-                        }
-                        updatePoints(userId, points) // Add points for each medal
+                // Create a mutable map to work with
+                val userMedal = mutableMapOf(
+                    "goldCount" to (snapshot.child("goldCount").value?.toString()?.toDoubleOrNull() ?: 0.0),
+                    "silverCount" to (snapshot.child("silverCount").value?.toString()?.toDoubleOrNull() ?: 0.0),
+                    "bronzeCount" to (snapshot.child("bronzeCount").value?.toString()?.toDoubleOrNull() ?: 0.0)
+                )
+                // Update the counts based on awarded medals
+                medals.forEach { (medalType, points) ->
+                    when (medalType) {
+                        "emas" -> userMedal["goldCount"] = userMedal["goldCount"]!! + 1
+                        "perak" -> userMedal["silverCount"] = userMedal["silverCount"]!! + 1
+                        "perunggu" -> userMedal["bronzeCount"] = userMedal["bronzeCount"]!! + 1
                     }
-
-                    // Save updated medal data
-                    dbMedaliUser.child(userId).setValue(it).addOnSuccessListener {
-                        onSuccess("All medals awarded and points updated!")
-                    }.addOnFailureListener {
-                        onFailure("Failed to update medals.")
-                    }
+                    updatePoints(userId, points) // Add points for each medal
                 }
+
+                // Save the updated map back to the database
+                dbMedaliUser.child(userId).setValue(userMedal).addOnSuccessListener {
+                    onSuccess("All medals awarded and points updated!")
+                }.addOnFailureListener {
+                    onFailure("Failed to update medals.")
+                }
+
             } else {
                 onFailure("User medal data not found.")
             }

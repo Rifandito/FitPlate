@@ -63,11 +63,11 @@ class MengukurTubuhActivity : AppCompatActivity() {
     }
 
     private var isBadanProgressLoaded = false
-    private var fetchedProgressData: Map<String, Double> = mapOf()
+    private var fetchedProgressData: Map<String, Any?> = mapOf()
     private fun fetchProgressBadan(userId: String){
         val progressTracker = BadanProgressTracker()
         progressTracker.fetchUserData(userId, object : BadanProgressTracker.ProgressCallback {
-            override fun onSuccess(data: Map<String, Double>) {
+            override fun onSuccess(data: Map<String, Any?>) {
                 fetchedProgressData = data
                 isBadanProgressLoaded = true
                 checkDataLoaded()
@@ -109,7 +109,7 @@ class MengukurTubuhActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateNutritionUI(data: Map<String, Double>) {
+    private fun updateNutritionUI(data: Map<String, Any?>) {
         val height = data["tinggiBadan"] ?: 0.0
         val weight = data["beratBadan"] ?: 0.0
         val targetWeight = data["targetBb"] ?: 0.0
