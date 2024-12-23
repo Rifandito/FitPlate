@@ -11,6 +11,7 @@ import android.widget.Toast
 import com.example.fitplate.AuthManager
 import com.example.fitplate.R
 import com.example.fitplate.RealtimeDatabase
+import com.example.fitplate.calculators.BadanProgressTracker
 import com.example.fitplate.databinding.HomeActivityBinding
 import java.text.*
 import java.util.*
@@ -78,6 +79,9 @@ class HomeActivity : AppCompatActivity() {
     private var isGiziProgressLoaded = false
     private var isAirTargetLoaded = false
     private var isAirProgressLoaded = false
+    private var isBadanProgressLoaded = false
+
+    private var fetchedProgressData: Map<String, Double> = mapOf()
 
     private fun loadData(userId: String) {
         val dateKey = getCurrentDateKey()
@@ -144,6 +148,18 @@ class HomeActivity : AppCompatActivity() {
             isAirProgressLoaded = true
             checkDataLoaded()
         }
+
+        val progressTracker = BadanProgressTracker()
+        progressTracker.fetchUserData(userId, object : BadanProgressTracker.ProgressCallback {
+            override fun onSuccess(data: Map<String, Double>) {
+                fetchedProgressData = data
+                isBadanProgressLoaded = true
+                checkDataLoaded()
+            }
+            override fun onFailure(errorMessage: String) {
+                Toast.makeText(this@HomeActivity, errorMessage, Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun checkDataLoaded() {
@@ -151,6 +167,9 @@ class HomeActivity : AppCompatActivity() {
             updateNutritionUI()
         } else if (isAirTargetLoaded && isAirProgressLoaded) {
             //updateAirUI()
+        }
+        if (isBadanProgressLoaded && fetchedProgressData.isNotEmpty()) {
+            updateBbPreview(fetchedProgressData)
         }
     }
 
@@ -170,6 +189,18 @@ class HomeActivity : AppCompatActivity() {
             progressBarAir.progress = calculateProgress(progressAir, targetAir)
         }
     }
+
+    private fun updateAirUI(){
+
+    }
+
+    private fun updateBbPreview(data: Map<String, Double>) {
+        val weight = data["beratBadan"] ?: 0.0
+        val targetWeight = data["targetBb"] ?: 0.0
+        Log.d("UIUpdate", "Updating UI: weight = $weight, targetWeight = $targetWeight")
+        binding.tvPreviewBb.text = "$weight kg/ $targetWeight kg"
+    }
+
 
     private fun calculateProgress(progress: Double?, target: Double?): Int {
         return if (progress != null && target != null && target > 0) {
