@@ -32,7 +32,7 @@
 
             <!-- Back Button -->
             <ImageButton
-                android:id="@+id/backButton"
+                android:id="@+id/profilToHome"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="60dp"
@@ -107,6 +107,7 @@
                                 android:src="@drawable/ic_height" />
 
                             <TextView
+                                android:id="@+id/tinggiBadanProfil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
@@ -128,6 +129,7 @@
                                 android:src="@drawable/ic_width" />
 
                             <TextView
+                                android:id="@+id/BeratBadanProfil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
@@ -149,6 +151,7 @@
                                 android:src="@drawable/ic_goal" />
 
                             <TextView
+                                android:id="@+id/targetBBprofil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
@@ -176,6 +179,7 @@
                     android:padding="16dp">
 
                     <TextView
+                        android:id="@+id/bmiProfil"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="BMI saat ini = 20.0"
@@ -183,6 +187,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/penjelasBMI"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -221,7 +226,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textViewPointsToNext"
+                        android:id="@+id/tvTotalPoin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -274,6 +279,7 @@
                                 android:background="@drawable/gold" />
 
                             <TextView
+                                android:id="@+id/totalGold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
@@ -305,6 +311,7 @@
                                 android:background="@drawable/silver" />
 
                             <TextView
+                                android:id="@+id/totalPerak"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
@@ -336,6 +343,7 @@
                                 android:background="@drawable/bronze" />
 
                             <TextView
+                                android:id="@+id/totalPerunggu"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"

@@ -46,8 +46,7 @@ class MengukurTubuhActivity : AppCompatActivity() {
         fetchProgressBadan(userId)
 
         mengukurToHome.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
         updateButton.setOnClickListener {
@@ -105,7 +104,6 @@ class MengukurTubuhActivity : AppCompatActivity() {
             }
         })
     }
-
 
     private fun checkDataLoaded() {
         if (isBadanProgressLoaded) {

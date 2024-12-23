@@ -18,6 +18,10 @@ class RecipeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupTabs()
+
+        binding.resepToHome.setOnClickListener {
+            finish()
+        }
     }
 
     private fun setupTabs() {

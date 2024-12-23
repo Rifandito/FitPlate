@@ -70,7 +70,8 @@ class FoodEditActivity : AppCompatActivity() {
 
         // button back ke home
         binding.FoodEditToDetail.setOnClickListener {
-            navigateToDetailFoodActivity()
+            //navigateToDetailFoodActivity()
+            finish()
         }
     }
 

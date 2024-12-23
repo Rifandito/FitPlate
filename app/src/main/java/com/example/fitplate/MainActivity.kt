@@ -101,3 +101,11 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 }
+
+
+//Rifandito Daniswara : 22523219
+//Diena Mukafasyadiah : 22523269
+//Mahendi Putri Dinanti : 21523001
+
+// Username : Nami
+// Password : Namichan
