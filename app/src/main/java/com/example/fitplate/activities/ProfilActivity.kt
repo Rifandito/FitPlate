@@ -1,5 +1,6 @@
 package com.example.fitplate.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -40,6 +41,8 @@ class ProfilActivity : AppCompatActivity() {
         binding.profilToHome.setOnClickListener {
             finish()
         }
+
+        setupLogoutButton()
     }
 
     private var isBadanProgressLoaded = false
@@ -129,4 +132,19 @@ class ProfilActivity : AppCompatActivity() {
             binding.penjelasBMI.text = "berat badan tidak ditemukan"
         }
     }
+
+    private fun setupLogoutButton() {
+        binding.logoutButton.setOnClickListener {
+            // Clear user session using AuthManager
+            val authManager = AuthManager(this)
+            authManager.logout()
+
+            // Redirect to LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+    }
+
 }
