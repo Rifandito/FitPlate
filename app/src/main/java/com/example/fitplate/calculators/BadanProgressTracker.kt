@@ -44,7 +44,6 @@ class BadanProgressTracker {
                 }
             }
 
-
             override fun onCancelled(error: DatabaseError) {
                 callback.onFailure("Failed to fetch progress: ${error.message}")
             }

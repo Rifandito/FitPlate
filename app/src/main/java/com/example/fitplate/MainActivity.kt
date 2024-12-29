@@ -102,7 +102,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-
 //Rifandito Daniswara : 22523219
 //Diena Mukafasyadiah : 22523269
 //Mahendi Putri Dinanti : 21523001
